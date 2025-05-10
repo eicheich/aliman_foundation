@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - Al Iman Foundation</title>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo-container">
+            <div class="logo">
+              <img
+                src="https://via.placeholder.com/200/ffffff/0c637f?text=AIF"
+                alt="Al Iman Foundation Logo"
+              />
+            </div>
+            <div class="logo-text">
+              <h1>Al Iman Foundation</h1>
+              <p>Enter to learn, leave to serve</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container nav-container">
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item active">
+            <a href="services.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="school.html" class="nav-link">School</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <div class="container">
+        <h1>Our Services</h1>
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a> / <span>Services</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="services-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Services</h2>
+          <p>Discover the various services and resources we provide</p>
+        </div>
+        <div class="links-grid">
+          <div class="link-card">
+            <a href="#workshop"><i class="fas fa-calendar-alt"></i>Link Pendaftaran Workshop/Seminar </a>
+          </div>
+          <div class="link-card">
+            <a href="#facebook"><i class="fab fa-facebook"></i>Our Facebook </a>
+          </div>
+          <div class="link-card">
+            <a href="#whatsapp"><i class="fab fa-whatsapp"></i>WhatsApp Channel </a>
+          </div>
+          <div class="link-card">
+            <a href="#business"><i class="fas fa-book"></i>AIF Business Finder </a>
+          </div>
+          <div class="link-card">
+            <a href="#alumni"><i class="fas fa-user-graduate"></i>Form Sahabat Alumni SMK Al Iman IBS </a>
+          </div>
+          <div class="link-card">
+            <a href="#konsultasi"><i class="fas fa-mosque"></i>Reservasi Konsultasi Kuliah/Kerja </a>
+          </div>
+          <div class="link-card">
+            <a href="#form"><i class="fas fa-clipboard-list"></i>Form Konsultasi </a>
+          </div>
+          <div class="link-card">
+            <a href="#donasi"><i class="fas fa-donate"></i>Donasi Online </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workshop Section -->
+    <section id="workshop" class="service-detail">
+      <div class="container">
+        <div class="service-content">
+          <div class="service-image">
+            <img src="https://via.placeholder.com/500x300/082f40/ffffff?text=Workshops+and+Seminars" alt="Workshops and Seminars">
+          </div>
+          <div class="service-info">
+            <h2>Workshops & Seminars</h2>
+            <p>Al Iman Foundation regularly organizes educational workshops and seminars on various topics to enhance students' knowledge and skills. These events feature expert speakers and interactive sessions.</p>
+            <h3>Upcoming Events</h3>
+            <ul class="event-list">
+              <li>
+                <div class="event-date">
+                  <span class="day">15</span>
+                  <span class="month">May</span>
+                </div>
+                <div class="event-details">
+                  <h4>Islamic Finance Workshop</h4>
+                  <p>Learn about Islamic banking principles and financial management</p>
+                  <div class="event-meta">
+                    <span><i class="fas fa-clock"></i>09:00 AM - 04:00 PM</span>
+                    <span><i class="fas fa-map-marker-alt"></i>Main Auditorium</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="event-date">
+                  <span class="day">22</span>
+                  <span class="month">May</span>
+                </div>
+                <div class="event-details">
+                  <h4>Career Development Seminar</h4>
+                  <p>Guidance on job search, resume building, and interview skills</p>
+                  <div class="event-meta">
+                    <span><i class="fas fa-clock"></i>10:00 AM - 02:00 PM</span>
+                    <span><i class="fas fa-map-marker-alt"></i>Conference Room</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="event-date">
+                  <span class="day">05</span>
+                  <span class="month">Jun</span>
+                </div>
+                <div class="event-details">
+                  <h4>Quranic Studies Workshop</h4>
+                  <p>Deep dive into tafsir and understanding of Quranic verses</p>
+                  <div class="event-meta">
+                    <span><i class="fas fa-clock"></i>08:00 AM - 12:00 PM</span>
+                    <span><i class="fas fa-map-marker-alt"></i>Prayer Hall</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <a href="#" class="btn-primary">Register for Events</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="facebook" class="service-detail light-bg">
+      <div class="container">
+        <div class="service-content reverse">
+          <div class="service-image">
+            <img src="https://via.placeholder.com/500x300/082f40/ffffff?text=Social+Media" alt="Social Media">
+          </div>
+          <div class="service-info">
+            <h2>Our Social Media</h2>
+            <p>Stay connected with Al Iman Foundation through our social media channels. Follow us for regular updates, event announcements, educational content, and more.</p>
+            <div class="social-preview">
+              <h3>Facebook</h3>
+              <div class="preview-box">
+                <div class="preview-header">
+                  <img src="https://via.placeholder.com/50/ffffff/0c637f?text=AIF" alt="Al Iman Foundation">
+                  <div>
+                    <h4>Al Iman Foundation</h4>
+                    <p>Educational Organization</p>
+                  </div>
+                </div>
+                <p class="preview-content">Join our growing community of over 10,000 followers and stay updated with our latest activities, events, and announcements.</p>
+                <a href="#" class="social-btn facebook-btn"><i class="fab fa-facebook"></i>Follow Our Page</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp Section -->
+    <section id="whatsapp" class="service-detail">
+      <div class="container">
+        <div class="service-content">
+          <div class="service-image">
+            <img src="https://via.placeholder.com/500x300/082f40/ffffff?text=WhatsApp+Channel" alt="WhatsApp Channel">
+          </div>
+          <div class="service-info">
+            <h2>WhatsApp Channel</h2>
+            <p>Our WhatsApp channel provides a convenient way to receive important announcements, reminders, and updates directly on your phone.</p>
+            <div class="whatsapp-features">
+              <div class="feature">
+                <i class="fas fa-bell"></i>
+                <h4>Instant Notifications</h4>
+                <p>Get real-time updates about events and activities</p>
+              </div>
+              <div class="feature">
+                <i class="fas fa-newspaper"></i>
+                <h4>Weekly Newsletters</h4>
+                <p>Receive our weekly digest of news and activities</p>
+              </div>
+              <div class="feature">
+                <i class="fas fa-calendar-check"></i>
+                <h4>Event Reminders</h4>
+                <p>Never miss important deadlines or events</p>
+              </div>
+            </div>
+            <a href="#" class="btn-whatsapp"><i class="fab fa-whatsapp"></i>Join Our Channel</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Business Finder Section -->
+    <section id="business" class="service-detail light-bg">
+      <div class="container">
+        <div class="service-content reverse">
+          <div class="service-image">
+            <img src="https://via.placeholder.com/500x300/082f40/ffffff?text=Business+Finder" alt="Business Finder">
+          </div>
+          <div class="service-info">
+            <h2>AIF Business Finder</h2>
+            <p>Our Business Finder service connects members of our community with Muslim-owned businesses and services. Support local businesses while finding the services you need.</p>
+            <div class="business-categories">
+              <span>Education</span>
+              <span>Food & Catering</span>
+              <span>Professional Services</span>
+              <span>Retail</span>
+              <span>Health</span>
+              <span>Technology</span>
+            </div>
+            <a href="#" class="btn-primary">Explore Directory</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alumni Section -->
+    <section id="alumni" class="service-detail">
+      <div class="container">
+        <div class="service-content">
+          <div class="service-image">
+            <img src="https://via.placeholder.com/500x300/082f40/ffffff?text=Alumni+Network" alt="Alumni Network">
+          </div>
+          <div class="service-info">
+            <h2>Form Sahabat Alumni SMK Al Iman IBS</h2>
+            <p>Stay connected with your alma mater and fellow alumni. Join our alumni network for networking opportunities, mentorship programs, and special events.</p>
+            <div class="alumni-benefits">
+              <ul>
+                <li>Connect with classmates and build professional networks</li>
+                <li>Receive invitations to alumni gatherings and reunions</li>
+                <li>Participate in mentorship programs</li>
+                <li>Access job opportunities shared by fellow alumni</li>
+              </ul>
+            </div>
+            <a href="#" class="btn-primary">Join Alumni Network</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img
+              src="https://via.placeholder.com/100/ffffff/0c637f?text=AIF"
+              alt="Al Iman Foundation Logo"
+            />
+          </div>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="school.html">School</a>
+            <a href="contact.html">Contact</a>
+            <a href="#">Donations</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+          <div class="footer-copy">
+            &copy; 2025 Al Iman Foundation. All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navMenu.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>
