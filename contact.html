@@ -3,362 +3,105 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us - Al Iman Foundation</title>
-    <!-- Font Awesome for icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>Kontak - Al Iman Foundation</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Remove any green/ijo overrides, use only main theme */
+    </style>
   </head>
   <body>
-    <!-- Header -->
     <header>
       <div class="container">
-        <div class="header-content">
-          <div class="logo-container">
-            <div class="logo">
-              <img
-                src="https://via.placeholder.com/200/ffffff/0c637f?text=AIF"
-                alt="Al Iman Foundation Logo"
-              />
-            </div>
-            <div class="logo-text">
-              <h1>Al Iman Foundation</h1>
-              <p>Enter to learn, leave to serve</p>
-            </div>
-          </div>
+        <div class="logo">
+          <img src="img/aiflogo.png" alt="Al Iman Foundation Logo" />
+          <h1>Al Iman Foundation</h1>
+          <p>Pendidikan Islam Berkualitas</p>
         </div>
       </div>
     </header>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-      <div class="container nav-container">
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="about.html" class="nav-link">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a href="services.html" class="nav-link">Services</a>
-          </li>
-          <li class="nav-item">
-            <a href="school.html" class="nav-link">School</a>
-          </li>
-          <li class="nav-item active">
-            <a href="contact.html" class="nav-link">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div id="nav-placeholder"></div>
 
-    <!-- Page Header -->
     <div class="page-header">
       <div class="container">
-        <h1>Contact Us</h1>
-        <div class="breadcrumbs">
-          <a href="index.html">Home</a> / <span>Contact</span>
-        </div>
+        <h2>Hubungi Kami</h2>
+        <p>Silakan hubungi kami untuk informasi lebih lanjut</p>
       </div>
     </div>
 
-    <!-- Contact Info Section -->
     <section class="contact-info-section">
       <div class="container">
         <div class="contact-info-grid">
           <div class="contact-card">
-            <div class="contact-icon">
-              <i class="fas fa-map-marker-alt"></i>
-            </div>
-            <h3>Visit Us</h3>
+            <div class="contact-icon">📍</div>
+            <h3>Alamat Kami</h3>
             <p>
               Jl. Al Iman No. 123<br />Jakarta Selatan, 12345<br />Indonesia
             </p>
           </div>
           <div class="contact-card">
-            <div class="contact-icon">
-              <i class="fas fa-phone-alt"></i>
-            </div>
-            <h3>Call Us</h3>
-            <p>Phone: +62 21 1234 5678<br />WhatsApp: +62 812 3456 7890</p>
+            <div class="contact-icon">📞</div>
+            <h3>Telepon</h3>
+            <p>Telp: (021) 1234-5678<br />WhatsApp: 0812-3456-7890</p>
           </div>
           <div class="contact-card">
-            <div class="contact-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <h3>Email Us</h3>
+            <div class="contact-icon">✉️</div>
+            <h3>Email</h3>
             <p>info@alimanfoundation.org<br />admin@alimanfoundation.org</p>
           </div>
           <div class="contact-card">
-            <div class="contact-icon">
-              <i class="fas fa-clock"></i>
-            </div>
-            <h3>Office Hours</h3>
-            <p>
-              Monday - Friday: 8:00 AM - 4:00 PM<br />Saturday: 8:00 AM - 12:00
-              PM
-            </p>
+            <div class="contact-icon">⏰</div>
+            <h3>Jam Kerja</h3>
+            <p>Senin - Jumat: 08:00 - 16:00<br />Sabtu: 08:00 - 12:00</p>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Contact Form Section -->
-    <section class="contact-form-section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Get in Touch</h2>
-          <p>We'd love to hear from you. Please fill out the form below.</p>
-        </div>
-        <div class="contact-form-container">
-          <form class="contact-form" id="contactForm">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Full Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Enter your name"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  required
-                />
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  placeholder="Enter your phone number"
-                />
-              </div>
-              <div class="form-group">
-                <label for="subject">Subject</label>
-                <select id="subject" name="subject" required>
-                  <option value="" disabled selected>Select a subject</option>
-                  <option value="general">General Inquiry</option>
-                  <option value="donation">Donation Information</option>
-                  <option value="school">School Admission</option>
-                  <option value="volunteer">Volunteer Opportunities</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
+        <div class="contact-form">
+          <h3>Kirim Pesan</h3>
+          <form id="contactForm" action="#" method="POST">
+            <div class="form-group">
+              <label for="name">Nama Lengkap</label>
+              <input type="text" id="name" name="name" required />
             </div>
             <div class="form-group">
-              <label for="message">Message</label>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subjek</label>
+              <select id="subject" name="subject" required>
+                <option value="" disabled selected>Pilih subjek</option>
+                <option value="umum">Pertanyaan Umum</option>
+                <option value="pendaftaran">Pendaftaran Siswa</option>
+                <option value="kerjasama">Kerjasama</option>
+                <option value="lainnya">Lainnya</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Pesan</label>
               <textarea
                 id="message"
                 name="message"
                 rows="5"
-                placeholder="Write your message here"
                 required
               ></textarea>
             </div>
-            <div class="form-group form-checkbox">
-              <input
-                type="checkbox"
-                id="newsletter"
-                name="newsletter"
-                checked
-              />
-              <label for="newsletter">Subscribe to our newsletter</label>
-            </div>
-            <button type="submit" class="btn-primary">Send Message</button>
+            <button type="submit" class="btn">Kirim Pesan</button>
           </form>
         </div>
-      </div>
-    </section>
 
-    <!-- Map Section -->
-    <section class="map-section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Find Us</h2>
-          <p>Our location on the map</p>
-        </div>
         <div class="map-container">
-          <!-- Replace with an actual Google Maps embed code in production -->
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126920.29549961454!2d106.7294317672053!3d-6.2295811804783105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e945e34b9d%3A0x100c5e82dd4b820!2sSouth%20Jakarta%2C%20Jakarta!5e0!3m2!1sen!2sid!4v1656543899911!5m2!1sen!2sid"
-            width="100%"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126920.29549961454!2d106.7294317672053!3d-6.2295811804783105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e945e34b9d%3A0x100c5e82dd4b820!2sSouth%20Jakarta%2C%20Jakarta!5e0!3m2!1sen!2sid!4v1"
+            title="Lokasi Al Iman Foundation di Jakarta Selatan"
           >
           </iframe>
         </div>
       </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Frequently Asked Questions</h2>
-          <p>Find answers to common questions</p>
-        </div>
-        <div class="faq-container">
-          <div class="faq-item">
-            <div class="faq-question">
-              <h3>How can I donate to Al Iman Foundation?</h3>
-              <span class="faq-toggle"
-                ><i class="fas fa-chevron-down"></i
-              ></span>
-            </div>
-            <div class="faq-answer">
-              <p>
-                You can donate to Al Iman Foundation through our online donation
-                portal, bank transfer, or by visiting our office. All donations
-                are tax-deductible. For more information, please visit our
-                Donation page or contact our finance department.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              <h3>When does registration for the new academic year open?</h3>
-              <span class="faq-toggle"
-                ><i class="fas fa-chevron-down"></i
-              ></span>
-            </div>
-            <div class="faq-answer">
-              <p>
-                Registration for the new academic year typically opens in
-                January and continues until April. Early registration is
-                recommended as spots fill quickly. Please check the School page
-                for specific dates and application procedures.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              <h3>How can I volunteer at Al Iman Foundation?</h3>
-              <span class="faq-toggle"
-                ><i class="fas fa-chevron-down"></i
-              ></span>
-            </div>
-            <div class="faq-answer">
-              <p>
-                We welcome volunteers in various areas including teaching,
-                administration, event organization, and community outreach.
-                Please fill out the volunteer form on our website or contact our
-                volunteer coordinator for more information.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              <h3>Do you offer scholarships for students?</h3>
-              <span class="faq-toggle"
-                ><i class="fas fa-chevron-down"></i
-              ></span>
-            </div>
-            <div class="faq-answer">
-              <p>
-                Yes, we offer merit-based and need-based scholarships for
-                qualified students. Scholarship applications are typically
-                reviewed alongside admission applications. Please contact our
-                admissions office for more details about eligibility and
-                application procedures.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div id="footer-placeholder"></div>
 
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-logo">
-            <img
-              src="https://via.placeholder.com/100/ffffff/0c637f?text=AIF"
-              alt="Al Iman Foundation Logo"
-            />
-          </div>
-          <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="school.html">School</a>
-            <a href="contact.html">Contact</a>
-            <a href="#">Donations</a>
-            <a href="#">Privacy Policy</a>
-          </div>
-          <div class="footer-copy">
-            &copy; 2025 Al Iman Foundation. All Rights Reserved.
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script>
-      // Mobile menu toggle
-      const hamburger = document.querySelector(".hamburger");
-      const navMenu = document.querySelector(".nav-menu");
-
-      hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-      });
-
-      document.querySelectorAll(".nav-link").forEach((link) => {
-        link.addEventListener("click", () => {
-          hamburger.classList.remove("active");
-          navMenu.classList.remove("active");
-        });
-      });
-
-      // FAQ toggle
-      document.querySelectorAll(".faq-question").forEach((question) => {
-        question.addEventListener("click", () => {
-          const faqItem = question.parentElement;
-          faqItem.classList.toggle("active");
-          const icon = question.querySelector(".faq-toggle i");
-          if (faqItem.classList.contains("active")) {
-            icon.classList.replace("fa-chevron-down", "fa-chevron-up");
-          } else {
-            icon.classList.replace("fa-chevron-up", "fa-chevron-down");
-          }
-        });
-      });
-
-      // Form submission (for demo purposes)
-      document
-        .getElementById("contactForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          alert("Thank you for your message. We will contact you shortly!");
-          this.reset();
-        });
-    </script>
+    <script src="js/components.js"></script>
   </body>
 </html>
