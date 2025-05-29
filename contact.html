@@ -1,107 +1,510 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kontak - Al Iman Foundation</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/contact-form.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <style>
-      /* Remove any green/ijo overrides, use only main theme */
+      body {
+        font-family: "Inter", "Segoe UI", Arial, sans-serif;
+        background-color: var(--background-light);
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      /* Decorative circles */
+      .decoration-circle {
+        position: absolute;
+        border-radius: 50%;
+        z-index: -1;
+        opacity: 0.5;
+      }
+
+      .decoration-circle-1 {
+        width: 300px;
+        height: 300px;
+        background: var(--primary-light);
+        top: -150px;
+        left: -150px;
+        filter: blur(80px);
+      }
+
+      .decoration-circle-2 {
+        width: 250px;
+        height: 250px;
+        background: var(--accent-light);
+        bottom: 20%;
+        right: -100px;
+        filter: blur(60px);
+      }
+
+      .page-header {
+        background: var(--gradient-primary);
+        color: #fff;
+        border-radius: 0 0 var(--card-radius) var(--card-radius);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+        padding: 5rem 0 4rem;
+      }
+
+      .page-header::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -10%;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .page-header::after {
+        content: "";
+        position: absolute;
+        bottom: -10%;
+        left: 5%;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .page-header h2 {
+        color: #fff;
+        font-size: 2.8rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        margin-bottom: 1rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .page-header p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.1rem;
+        max-width: 600px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .contact-info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin: 4rem 0;
+      }
+
+      .contact-card {
+        background: #fff;
+        border-radius: var(--card-radius);
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        transition: all var(--transition-speed) ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .contact-card::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: var(--gradient-accent);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform var(--transition-speed) ease;
+      }
+
+      .contact-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-card:hover::after {
+        transform: scaleX(1);
+      }
+
+      .contact-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: var(--primary-color);
+        background: var(--background-light);
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        border-radius: 50%;
+        display: inline-block;
+        transition: all var(--transition-speed) ease;
+      }
+
+      .contact-card:hover .contact-icon {
+        color: white;
+        background: var(--gradient-primary);
+        transform: scale(1.1);
+      }
+
+      .contact-form {
+        background: #fff;
+        border-radius: var(--card-radius);
+        padding: 3rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        margin-bottom: 4rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .contact-form::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: var(--gradient-primary);
+      }
+
+      .contact-form h3 {
+        color: var(--primary-color);
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        font-weight: 700;
+        position: relative;
+        display: inline-block;
+      }
+
+      .contact-form h3::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 40%;
+        height: 3px;
+        background: var(--accent-color);
+      }
+
+      .form-group {
+        margin-bottom: 1.8rem;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+        color: var(--text-color);
+      }
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+        font-family: inherit;
+        transition: all 0.2s;
+        font-size: 1rem;
+        background-color: var(--background-light);
+      }
+
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        border-color: var(--primary-color);
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+      }
+
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+      .form-submit {
+        margin-top: 2rem;
+        text-align: center;
+      }
+
+      .form-success {
+        background: linear-gradient(145deg, #f1fff1, #e6ffe6);
+        padding: 2rem;
+        border-radius: var(--card-radius);
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        margin-top: 2rem;
+      }
+
+      .success-icon {
+        font-size: 3rem;
+        color: #2ecc71;
+        margin-bottom: 1rem;
+      }
+
+      .form-success h4 {
+        color: #2ecc71;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .form-success p {
+        color: var(--text-color);
+      }
+
+      .hidden {
+        display: none;
+      }
+      .btn-submit {
+        padding: 1rem 2.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        background: var(--gradient-primary);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s;
+        box-shadow: 0 4px 15px rgba(0, 98, 204, 0.2);
+      }
+
+      .btn-submit:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 98, 204, 0.3);
+      }
+
+      .map-section {
+        margin-bottom: 4rem;
+      }
+
+      .map-section h3 {
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+        font-weight: 700;
+        position: relative;
+        display: inline-block;
+      }
+
+      .map-section h3::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 40%;
+        height: 3px;
+        background: var(--accent-color);
+      }
+
+      .map-container {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 16px rgba(26, 115, 232, 0.07);
+        height: 400px;
+      }
+
+      .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      @media (max-width: 768px) {
+        .form-row {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        .contact-form {
+          padding: 2rem;
+        }
+
+        .map-container {
+          height: 300px;
+        }
+      }
     </style>
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div class="logo">
-          <img src="img/aiflogo.png" alt="Al Iman Foundation Logo" />
-          <h1>Al Iman Foundation</h1>
-          <p>Pendidikan Islam Berkualitas</p>
-        </div>
-      </div>
-    </header>
+    <div class="decoration-circle decoration-circle-1"></div>
+    <div class="decoration-circle decoration-circle-2"></div>
 
     <div id="nav-placeholder"></div>
 
     <div class="page-header">
       <div class="container">
         <h2>Hubungi Kami</h2>
-        <p>Silakan hubungi kami untuk informasi lebih lanjut</p>
+        <p>
+          Silakan hubungi kami untuk informasi lebih lanjut tentang program
+          pengembangan karir dan layanan alumni Al Iman Foundation
+        </p>
       </div>
     </div>
 
-    <section class="contact-info-section">
-      <div class="container">
-        <div class="contact-info-grid">
-          <div class="contact-card">
-            <div class="contact-icon">📍</div>
-            <h3>Alamat Kami</h3>
-            <p>
-              Jl. Al Iman No. 123<br />Jakarta Selatan, 12345<br />Indonesia
-            </p>
+    <main>
+      <section class="contact-section">
+        <div class="container">
+          <div class="contact-info-grid">
+            <div class="contact-card">
+              <span class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </span>
+              <h3>Alamat</h3>
+              <p>Jl. Al Iman No. 123, Jakarta Selatan, Indonesia</p>
+            </div>
+
+            <div class="contact-card">
+              <span class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </span>
+              <h3>Telepon</h3>
+              <p>(021) 1234-5678</p>
+              <p>0812-3456-7890</p>
+            </div>
+
+            <div class="contact-card">
+              <span class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <h3>Email</h3>
+              <p>info@alimanfoundation.org</p>
+              <p>career@alimanfoundation.org</p>
+            </div>
           </div>
-          <div class="contact-card">
-            <div class="contact-icon">📞</div>
-            <h3>Telepon</h3>
-            <p>Telp: (021) 1234-5678<br />WhatsApp: 0812-3456-7890</p>
+
+          <div class="contact-form">
+            <h3>Kirim Pesan</h3>
+            <form id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Nama Lengkap</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Masukkan nama lengkap"
+                    required
+                  />
+                  <div class="error-message"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Masukkan alamat email"
+                    required
+                  />
+                  <div class="error-message"></div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subjek</label>
+                <select id="subject" name="subject" required>
+                  <option value="" disabled selected>Pilih subjek</option>
+                  <option value="career">Konsultasi Karir</option>
+                  <option value="scholarship">Informasi Beasiswa</option>
+                  <option value="workshop">Pendaftaran Workshop</option>
+                  <option value="alumni">Jaringan Alumni</option>
+                  <option value="donation">Donasi & Kerjasama</option>
+                  <option value="other">Lainnya</option>
+                </select>
+                <div class="error-message"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Pesan</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Tuliskan pesan Anda"
+                  required
+                ></textarea>
+                <div class="error-message"></div>
+              </div>
+
+              <div class="form-submit">
+                <button type="submit" class="btn-submit">
+                  <i class="fas fa-paper-plane"></i> Kirim Pesan
+                </button>
+              </div>
+            </form>
+            <div id="formSuccess" class="form-success hidden">
+              <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <h4>Pesan Terkirim!</h4>
+              <p>
+                Terima kasih telah menghubungi kami. Kami akan segera
+                menindaklanjuti pesan Anda.
+              </p>
+            </div>
           </div>
-          <div class="contact-card">
-            <div class="contact-icon">✉️</div>
-            <h3>Email</h3>
-            <p>info@alimanfoundation.org<br />admin@alimanfoundation.org</p>
-          </div>
-          <div class="contact-card">
-            <div class="contact-icon">⏰</div>
-            <h3>Jam Kerja</h3>
-            <p>Senin - Jumat: 08:00 - 16:00<br />Sabtu: 08:00 - 12:00</p>
+
+          <div class="map-section">
+            <h3>Lokasi Kami</h3>
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126917.12519689752!2d106.7228813382006!3d-6.229544511252997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e945e34b9d%3A0x5371bf0fdad786a2!2sJakarta%20Selatan%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1656926128367!5m2!1sid!2sid"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
           </div>
         </div>
-
-        <div class="contact-form">
-          <h3>Kirim Pesan</h3>
-          <form id="contactForm" action="#" method="POST">
-            <div class="form-group">
-              <label for="name">Nama Lengkap</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-              <label for="subject">Subjek</label>
-              <select id="subject" name="subject" required>
-                <option value="" disabled selected>Pilih subjek</option>
-                <option value="umum">Pertanyaan Umum</option>
-                <option value="pendaftaran">Pendaftaran Siswa</option>
-                <option value="kerjasama">Kerjasama</option>
-                <option value="lainnya">Lainnya</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="message">Pesan</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="btn">Kirim Pesan</button>
-          </form>
-        </div>
-
-        <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126920.29549961454!2d106.7294317672053!3d-6.2295811804783105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e945e34b9d%3A0x100c5e82dd4b820!2sSouth%20Jakarta%2C%20Jakarta!5e0!3m2!1sen!2sid!4v1"
-            title="Lokasi Al Iman Foundation di Jakarta Selatan"
-          >
-          </iframe>
-        </div>
-      </div>
-    </section>
-
+      </section>
+    </main>
     <div id="footer-placeholder"></div>
 
-    <script src="js/components.js"></script>
+    <script src="js/components-enhanced.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        loadComponent("navbar", "nav-placeholder");
+        loadComponent("footer", "footer-placeholder");
+
+        // Form submission handling
+        const contactForm = document.getElementById("contactForm");
+        if (contactForm) {
+          contactForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Simulate form submission
+            const submitBtn = this.querySelector(".btn-submit");
+            const originalText = submitBtn.innerHTML;
+
+            submitBtn.innerHTML =
+              '<i class="fas fa-spinner fa-spin"></i> Mengirim...';
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+              alert(
+                "Terima kasih! Pesan Anda telah kami terima. Kami akan segera menghubungi Anda kembali."
+              );
+              contactForm.reset();
+              submitBtn.innerHTML = originalText;
+              submitBtn.disabled = false;
+            }, 1500);
+          });
+        }
+      });
+    </script>
   </body>
 </html>
