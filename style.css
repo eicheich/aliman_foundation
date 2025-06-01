@@ -1953,4 +1953,647 @@ img {
   }
 }
 
+<<<<<<< HEAD
 
+=======
+/* DONASI */
+
+    .donasi-section {
+      padding: 80px 0;
+    }
+    
+    .donasi-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .donasi-intro {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .donasi-intro h2 {
+      font-family: 'Young Serif', serif;
+      font-size: 2.5rem;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    
+    .donasi-intro p {
+      font-size: 1.1rem;
+      color: #666;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .payment-methods {
+      display: grid;
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+    
+    .payment-card {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #e8ecf4;
+    }
+    
+    .payment-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    
+    .payment-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+      gap: 15px;
+    }
+    
+    .payment-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: white;
+    }
+    
+    .bank-icon {
+      background: linear-gradient(135deg, #3498db, #2980b9);
+    }
+    
+    .paypal-icon {
+      background: linear-gradient(135deg, #0070ba, #003087);
+    }
+    
+    .payment-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #2c3e50;
+      margin: 0;
+    }
+    
+    .account-details {
+      background: #f8f9ff;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+      border-left: 4px solid #3498db;
+    }
+    
+    .account-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      padding: 8px 0;
+    }
+    
+    .account-row:last-child {
+      margin-bottom: 0;
+    }
+    
+    .account-label {
+      font-weight: 500;
+      color: #555;
+      min-width: 120px;
+    }
+    
+    .account-value {
+      font-weight: 600;
+      color: #2c3e50;
+      font-family: 'Courier New', monospace;
+      background: white;
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      flex: 1;
+      margin-left: 15px;
+      text-align: center;
+    }
+    
+    .copy-btn {
+      background: #3498db;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      margin-left: 10px;
+      transition: background 0.3s ease;
+    }
+    
+    .copy-btn:hover {
+      background: #2980b9;
+    }
+    
+    .paypal-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #0070ba, #003087);
+      color: white;
+      text-decoration: none;
+      padding: 15px 25px;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-top: 15px;
+    }
+    
+    .paypal-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,112,186,0.3);
+      color: white;
+      text-decoration: none;
+    }
+    
+    .donation-note {
+      background: linear-gradient(135deg, #e8f5e8, #d4f4d4);
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      border: 1px solid #a8d8a8;
+    }
+    
+    .donation-note h3 {
+      color: #27ae60;
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    
+    .donation-note p {
+      color: #2d5a2d;
+      line-height: 1.6;
+      margin: 0;
+    }
+    
+    .toast {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #27ae60;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      z-index: 1000;
+    }
+    
+    .toast.show {
+      transform: translateX(0);
+    }
+    
+    @media (max-width: 768px) {
+      .donasi-intro h2 {
+        font-size: 2rem;
+      }
+      
+      .payment-card {
+        padding: 25px;
+      }
+      
+      .account-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+      
+      .account-value {
+        margin-left: 0;
+        width: 100%;
+      }
+      
+      .copy-btn {
+        margin-left: 0;
+        margin-top: 8px;
+        width: 100%;
+      }
+    }
+
+/* KONTAK */
+
+.contact-section {
+      padding: 80px 0;
+    }
+    
+    .contact-info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+    
+    .contact-card {
+      background: white;
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      border: 1px solid #e8ecf4;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .contact-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    
+    .contact-card::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(135deg, #3498db, #2980b9);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    
+    .contact-card:hover::after {
+      transform: scaleX(1);
+    }
+    
+    .contact-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #f8f9ff, #e8f2ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 25px;
+      font-size: 2rem;
+      color: #3498db;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-card:hover .contact-icon {
+      background: linear-gradient(135deg, #3498db, #2980b9);
+      color: white;
+      transform: scale(1.1);
+    }
+    
+    .contact-card h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+    
+    .contact-card p {
+      color: #666;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+    
+    .contact-form-container {
+      background: white;
+      border-radius: 20px;
+      padding: 50px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 60px;
+      border: 1px solid #e8ecf4;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .contact-form-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(135deg, #3498db, #2980b9);
+    }
+    
+    .contact-form-container h3 {
+      font-family: 'Young Serif', serif;
+      font-size: 2rem;
+      color: #2c3e50;
+      margin-bottom: 30px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .contact-form-container h3::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: #3498db;
+    }
+    
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      margin-bottom: 25px;
+    }
+    
+    .form-group {
+      margin-bottom: 25px;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #2c3e50;
+      font-size: 0.95rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 15px;
+      border: 2px solid #e8ecf4;
+      border-radius: 12px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      background: #f8f9ff;
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #3498db;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+      background: white;
+    }
+    
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    
+    .btn-submit {
+      background: linear-gradient(135deg, #3498db, #2980b9);
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 auto;
+    }
+    
+    .btn-submit:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+    }
+    
+    .btn-submit:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+    
+    .map-section {
+      margin-bottom: 60px;
+    }
+    
+    .map-section h3 {
+      font-family: 'Young Serif', serif;
+      font-size: 2rem;
+      color: #2c3e50;
+      margin-bottom: 30px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .map-section h3::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: #3498db;
+    }
+    
+    .map-container {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      height: 400px;
+      border: 1px solid #e8ecf4;
+    }
+    
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    
+    /* Social Media Section */
+    .social-media-section {
+      padding: 80px 0;
+      background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%);
+    }
+    
+    .social-media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+    
+    .social-card {
+      background: white;
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      border: 1px solid #e8ecf4;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .social-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .social-card.instagram::after {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    }
+    
+    .social-card.facebook::after {
+      background: #1877f2;
+    }
+    
+    .social-card.youtube::after {
+      background: #ff0000;
+    }
+    
+    .social-card.linkedin::after {
+      background: #0077b5;
+    }
+    
+    .social-card.whatsapp::after {
+      background: #25d366;
+    }
+    
+    .social-card::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    
+    .social-card:hover::after {
+      transform: scaleX(1);
+    }
+    
+    .social-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 2.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .social-card.instagram .social-icon {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      color: white;
+    }
+    
+    .social-card.facebook .social-icon {
+      background: #1877f2;
+      color: white;
+    }
+    
+    .social-card.youtube .social-icon {
+      background: #ff0000;
+      color: white;
+    }
+    
+    .social-card.linkedin .social-icon {
+      background: #0077b5;
+      color: white;
+    }
+    
+    .social-card.whatsapp .social-icon {
+      background: #25d366;
+      color: white;
+    }
+    
+    .social-card:hover .social-icon {
+      transform: scale(1.1);
+    }
+    
+    .social-card h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    
+    .social-card p {
+      color: #666;
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+    }
+    
+    .follow-btn {
+      background: linear-gradient(135deg, #3498db, #2980b9);
+      color: white;
+      padding: 10px 25px;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .social-card:hover .follow-btn {
+      transform: scale(1.05);
+    }
+    
+    .success-message {
+      background: linear-gradient(135deg, #d4edda, #c3e6cb);
+      border: 1px solid #a3d9a4;
+      color: #155724;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 20px;
+      display: none;
+    }
+    
+    .success-message i {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+    
+    @media (max-width: 768px) {
+      .contact-form-container {
+        padding: 30px 25px;
+      }
+      
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      .map-container {
+        height: 300px;
+      }
+      
+      .contact-info-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      .social-media-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+>>>>>>> master
