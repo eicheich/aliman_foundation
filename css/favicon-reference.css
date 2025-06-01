@@ -1,0 +1,17 @@
+/* Favicon generator CSS */
+/* Use this for reference - this would be used by a generator tool to create the actual favicon files */
+
+/* Favicon colors - using the teal/tosca theme */
+:root {
+  --favicon-primary: #00a19c; /* Primary teal color */
+  --favicon-accent: #4fd0cb;  /* Lighter teal */
+  --favicon-text: #ffffff;    /* White for text/icon */
+  --favicon-background: #00827e; /* Darker teal */
+}
+
+/* Favicon should include:
+ * - Simple "AI" letters representing Al Iman
+ * - Teal colored circle background
+ * - Clean, modern design without details
+ * - Scale well at small sizes (16x16, 32x32, etc.)
+ */
