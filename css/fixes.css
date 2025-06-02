@@ -1,0 +1,211 @@
+/* Font size fixes to make the website more proportional */
+
+/* Header and navbar fixes */
+#header {
+  min-height: 80px;
+  border-radius: 50px;
+  top: 15px;
+}
+
+.header-flex {
+  min-height: 80px;
+}
+
+.logo {
+  min-height: 60px;
+  max-width: 60px;
+}
+
+.brand-title span {
+  font-size: 1.2rem;
+}
+
+.nav-link {
+  font-size: 0.9rem;
+  padding: 0.5em 0.9em;
+}
+
+/* Hero section fixes */
+.hero-title {
+  font-size: 3rem;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+}
+
+.hero-badge-text {
+  font-size: 1.2rem;
+}
+
+.hero-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.hero-btn {
+  font-size: 0.95rem;
+  padding: 12px 24px;
+}
+
+/* Section titles and content fixes */
+.section-title {
+  font-size: 2rem;
+}
+
+.section-description {
+  font-size: 1rem;
+}
+
+.welcome-title {
+  font-size: 2rem;
+}
+
+.welcome-desc {
+  font-size: 1.1rem;
+}
+
+.layanan-title {
+  font-size: 1.3rem;
+}
+
+.layanan-desc {
+  font-size: 0.95rem;
+}
+
+.kegiatan-title {
+  font-size: 2rem;
+}
+
+.kegiatan-desc {
+  font-size: 1.1rem;
+}
+
+/* Footer text fixes */
+.footer-title {
+  font-size: 1.4rem;
+}
+
+.footer-desc {
+  font-size: 0.95rem;
+}
+
+.footer-bottom p {
+  font-size: 0.85rem;
+}
+
+/* Founder section fixes */
+.founder-name {
+  font-size: 1.7rem;
+}
+
+.founder-position {
+  font-size: 1rem;
+}
+
+.founder-bio {
+  font-size: 0.95rem;
+}
+
+.founder-quote::before {
+  font-size: 50px;
+}
+
+/* Page header fixes */
+.page-header h2 {
+  font-size: 2.2rem;
+}
+
+.page-header p {
+  font-size: 1rem;
+}
+
+/* Vision & Mission section fixes */
+.vm-title {
+  font-size: 1.5rem;
+}
+
+.vm-desc,
+.mission-list {
+  font-size: 0.95rem;
+}
+
+/* Team section fixes */
+.team-name {
+  font-size: 1.1rem;
+}
+
+.team-position {
+  font-size: 0.85rem;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 991.98px) {
+  body {
+    padding-top: 130px;
+  }
+
+  #header {
+    min-height: 70px;
+  }
+
+  .header-flex {
+    min-height: 70px;
+  }
+
+  .logo {
+    min-height: 50px;
+    max-width: 50px;
+  }
+
+  .brand-title span {
+    font-size: 1.1rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  body {
+    padding-top: 110px;
+  }
+
+  #header {
+    min-height: 60px;
+    border-radius: 30px;
+  }
+
+  .header-flex {
+    min-height: 60px;
+  }
+
+  .mobile-nav-menu {
+    top: 55px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 100px;
+  }
+
+  .brand-title span {
+    font-size: 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .section-title,
+  .welcome-title,
+  .kegiatan-title {
+    font-size: 1.7rem;
+  }
+}

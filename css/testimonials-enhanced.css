@@ -1,0 +1,262 @@
+/* Enhanced testimonials animations */
+.reveal-special {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-special.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Enhanced styling for section title */
+.alumni-testimonials-section .section-title {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.alumni-testimonials-section .section-title::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 0;
+  background: linear-gradient(90deg, #10B093, rgba(16, 176, 147, 0.2));
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 2px;
+}
+
+.alumni-testimonials-section .section-title.active::after {
+  width: 80px;
+  transition-delay: 0.3s;
+}
+
+/* Enhanced card animations */
+.alumni-testimonial-card.enhanced-animation {
+  animation: cardPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes cardPop {
+  0% {
+    transform: scale(0.95) translateY(10px);
+  }
+  50% {
+    transform: scale(1.02) translateY(-5px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Make the container smoother */
+.testimonials-scroll-container {
+  position: relative;
+  margin: 30px 0;
+  padding: 10px;
+  scroll-snap-type: x proximity; /* A little less strict than mandatory */
+}
+
+/* Enhanced scroll arrows */
+.scroll-arrow {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  transition: all 0.3s ease;
+  color: #1B4559;
+  border: 2px solid rgba(16, 176, 147, 0.2);
+}
+
+.scroll-arrow:hover {
+  background: #10B093;
+  color: white;
+  transform: translateY(-50%) scale(1.1);
+  border-color: #10B093;
+}
+
+.scroll-arrow:active {
+  transform: translateY(-50%) scale(0.95);
+  background: #0e9a80;
+}
+
+.scroll-left {
+  left: 5px;
+}
+
+.scroll-right {
+  right: 5px;
+}
+
+/* Make scroll arrows more visible on mobile */
+@media (max-width: 768px) {
+  .scroll-arrow {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .scroll-left {
+    left: 0;
+  }
+
+  .scroll-right {
+    right: 0;
+  }
+}
+
+/* Add subtle hint indicator for horizontal scrolling */
+.alumni-testimonials-container::after {
+  content: '⟺';
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  font-size: 16px;
+  color: #10B093;
+  opacity: 0.6;
+  animation: hintScroll 2s infinite;
+}
+
+@keyframes hintScroll {
+  0%, 100% { transform: translateX(0); opacity: 0.6; }
+  50% { transform: translateX(-10px); opacity: 0.9; }
+}
+
+/* Improved card transitions */
+.alumni-testimonial-card {
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              border-color 0.3s ease;
+}
+
+/* Scrolling animations */
+.alumni-testimonials-section.scrolling {
+  transition: transform 0.6s ease;
+}
+
+.alumni-testimonials-section.scrolling-left {
+  transform: translateX(3px);
+}
+
+.alumni-testimonials-section.scrolling-right {
+  transform: translateX(-3px);
+}
+
+/* Scroll indicator styling */
+.scroll-indicator {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 8px 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  opacity: 0.9;
+  animation: pulse 2s infinite;
+  transition: all 0.3s ease;
+}
+
+.scroll-hint {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #1B4559;
+  font-size: 14px;
+}
+
+.scroll-hint i {
+  color: #10B093;
+}
+
+.scroll-indicator.fade-out {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Improved scroll container */
+.testimonials-scroll-container {
+  position: relative;
+  margin: 30px 0;
+  padding: 10px 0 30px;
+  overflow: visible;
+}
+
+/* Focus effect for cards */
+.alumni-testimonial-card.focus {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(27, 69, 89, 0.15);
+  z-index: 2;
+  border-color: #10B093;
+}
+
+/* Improved scroll behavior */
+.alumni-testimonials-container {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 10px 5px 20px;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  gap: 20px;
+  scroll-snap-type: x proximity;
+  margin-bottom: 10px;
+  /* Better scrolling performance */
+  will-change: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* Animation for the testimonials container */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alumni-testimonials-container.stagger-list.animate {
+  animation: fadeInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .alumni-testimonial-card {
+    min-width: 280px;
+    padding: 24px;
+  }
+
+  .scroll-arrow {
+    width: 36px;
+    height: 36px;
+  }
+}

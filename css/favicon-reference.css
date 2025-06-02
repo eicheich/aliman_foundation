@@ -3,10 +3,14 @@
 
 /* Favicon colors - using the teal/tosca theme */
 :root {
-  --favicon-primary: #00a19c; /* Primary teal color */
-  --favicon-accent: #4fd0cb;  /* Lighter teal */
-  --favicon-text: #ffffff;    /* White for text/icon */
-  --favicon-background: #00827e; /* Darker teal */
+  --favicon-primary: #00a19c;
+  /* Primary teal color */
+  --favicon-accent: #4fd0cb;
+  /* Lighter teal */
+  --favicon-text: #ffffff;
+  /* White for text/icon */
+  --favicon-background: #00827e;
+  /* Darker teal */
 }
 
 /* Favicon should include:

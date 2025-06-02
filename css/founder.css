@@ -1,0 +1,290 @@
+/* Founder Section Enhanced Styles */
+.founder-section {
+    padding: 100px 0;
+    position: relative;
+    background: linear-gradient(135deg, rgba(27, 69, 89, 0.03) 0%, rgba(16, 176, 147, 0.05) 100%);
+    border-radius: 30px;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.founder-section::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: rgba(27, 69, 89, 0.04);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.founder-section::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: rgba(16, 176, 147, 0.06);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.founder-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title-highlight {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: #F5A61C;
+    border-radius: 4px;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.founder-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.founder-card {
+    background: #ffffff;
+    border-radius: 40px;
+    box-shadow: 0 20px 50px rgba(27, 69, 89, 0.12);
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.founder-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(27, 69, 89, 0.2);
+}
+
+.founder-header {
+    background: linear-gradient(135deg, #1B4559, #10B093);
+    height: 170px; /* Increased height to provide more space */
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: visible; /* Changed from hidden to visible to prevent cutoff */
+}
+
+.founder-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../img/pattern-light.png');
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.founder-photo-wrapper {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 8px solid white;
+    overflow: hidden;
+    margin-bottom: -90px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: white; /* Added background to prevent transparency issues */
+}
+
+.founder-card:hover .founder-photo-wrapper {
+    transform: scale(1.05);
+}
+
+.founder-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Changed from cover to contain to prevent cropping */
+    object-position: center; /* Ensure the image is centered */
+    transition: transform 0.5s ease;
+}
+
+.founder-card:hover .founder-photo {
+    transform: scale(1.1);
+}
+
+.founder-info {
+    padding: 110px 40px 40px; /* Increased top padding to accommodate the photo */
+    text-align: center;
+}
+
+.founder-name {
+    color: #1B4559;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.founder-position {
+    color: #10B093;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 24px;
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(16, 176, 147, 0.1);
+    border-radius: 20px;
+}
+
+.founder-bio {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.founder-quote {
+    font-style: italic;
+    color: #666;
+    position: relative;
+    padding: 20px 40px;
+    margin: 30px 0;
+    background: rgba(245, 166, 28, 0.05);
+    border-radius: 20px;
+}
+
+.founder-quote::before {
+    content: '"';
+    font-size: 60px;
+    color: rgba(245, 166, 28, 0.3);
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    font-family: Georgia, serif;
+}
+
+.founder-social {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.social-link.instagram {
+    background: linear-gradient(45deg, #E1306C, #C13584, #833AB4, #5851DB);
+    box-shadow: 0 5px 15px rgba(225, 48, 108, 0.3);
+}
+
+.social-link.linkedin {
+    background: #0077B5;
+    box-shadow: 0 5px 15px rgba(0, 119, 181, 0.3);
+}
+
+.social-link.twitter {
+    background: #1DA1F2;
+    box-shadow: 0 5px 15px rgba(29, 161, 242, 0.3);
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+}
+
+.social-link.instagram:hover {
+    box-shadow: 0 10px 25px rgba(225, 48, 108, 0.5);
+}
+
+.social-link.linkedin:hover {
+    box-shadow: 0 10px 25px rgba(0, 119, 181, 0.5);
+}
+
+.social-link.twitter:hover {
+    box-shadow: 0 10px 25px rgba(29, 161, 242, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .founder-header {
+        height: 140px; /* Increased height */
+    }
+
+    .founder-photo-wrapper {
+        width: 150px;
+        height: 150px;
+        margin-bottom: -75px;
+    }
+
+    .founder-info {
+        padding: 95px 25px 35px; /* Increased top padding */
+    }
+
+    .founder-name {
+        font-size: 1.7rem;
+    }
+
+    .founder-position {
+        font-size: 1.1rem;
+    }
+
+    .founder-bio {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .founder-header {
+        height: 120px; /* Increased height */
+    }
+
+    .founder-photo-wrapper {
+        width: 130px;
+        height: 130px;
+        margin-bottom: -65px;
+    }
+
+    .founder-info {
+        padding: 85px 20px 30px; /* Increased top padding */
+    }
+
+    .founder-name {
+        font-size: 1.5rem;
+    }
+
+    .founder-position {
+        font-size: 1rem;
+    }
+}

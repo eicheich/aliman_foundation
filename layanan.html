@@ -1,232 +1,334 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Layanan - Al-Iman Foundation</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Young+Serif:wght@400;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/brands.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/solid.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" crossorigin="anonymous">
-</head>
-<body>
-  <div class="wrapper">
-    <!-- Navbar/Header -->
-    <header class="section" id="header">
-      <div class="container header-flex">
-        <a href="index.html" class="header-logo-group" style="text-decoration: none; color: inherit;">
-          <img src="img/aiflogo.png" alt="Logo AIF" class="logo rounded-circle">
-          <div class="brand-title">
-            <span>Al-Iman<br>Foundation</span>
-          </div>
-        </a>
-        
-        <!-- Desktop Navigation -->
-        <nav class="nav-menu desktop-nav">
-          <a href="index.html" class="nav-link">Beranda</a>
-          <a href="layanan.html" class="nav-link active">Layanan</a>
-          <a href="https://aifscholarshipfinder.netlify.app/" class="nav-link">Beasiswa Finder</a>
-          <a href="kontak.html" class="nav-link">Kontak</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layanan - Al-Iman Foundation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Young+Serif:wght@400;600&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/brands.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/solid.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/fixes.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Navbar/Header -->
+      <header class="section" id="header">
+        <div class="container header-flex">
+          <a
+            href="index.html"
+            class="header-logo-group"
+            style="text-decoration: none; color: inherit"
+          >
+            <img
+              src="img/aiflogo.png"
+              alt="Logo AIF"
+              class="logo rounded-circle"
+            />
+            <div class="brand-title">
+              <span>Al-Iman<br />Foundation</span>
+            </div>
+          </a>
+          <!-- Desktop Navigation -->
+          <nav class="nav-menu desktop-nav">
+            <a href="index.html" class="nav-link">Beranda</a>
+            <a href="layanan.html" class="nav-link active">Layanan</a>
+            <a href="donasi.html" class="nav-link">Donasi</a>
+            <a href="kontak.html" class="nav-link">Kontak</a>
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav-menu">
+          <a href="index.html" class="mobile-nav-link">Beranda</a>
+          <a href="layanan.html" class="mobile-nav-link active">Layanan</a>
+          <a href="donasi.html" class="mobile-nav-link">Donasi</a>
+          <a href="kontak.html" class="mobile-nav-link">Kontak</a>
         </nav>
-        
-        <!-- Mobile Menu Button -->
-        <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
-      </div>
-      
-      <!-- Mobile Navigation -->
-      <nav class="mobile-nav-menu">
-        <a href="index.html" class="mobile-nav-link">Beranda</a>
-        <a href="layanan.html" class="mobile-nav-link active">Layanan</a>
-        <a href="beasiswa.html" class="mobile-nav-link">Beasiswa Finder</a>
-        <a href="kontak.html" class="mobile-nav-link">Contact</a>
-      </nav>
-    </header>
+      </header>
 
-    <!-- Hero Section -->
-    <section class="section hero-section text-center">
-      <div class="container">
-        <div class="hero-logo-badge">
-          <img src="img/aiflogo.png" alt="Al-Iman Foundation Logo" class="hero-logo">
-          <span class="hero-badge-text">Layanan Kami</span>
-        </div>
-        <div class="hero-title">Program dan Layanan Al-Iman Foundation</div>
-        <p class="hero-subtitle">Berbagai program dan layanan untuk mendukung perkembangan karir dan akademik alumni</p>
-      </div>
-    </section>
-
-    <!-- Program dan Layanan Kami Section -->
-    <section class="section layanan-section" id="program-layanan">
-      <div class="container">
-        <h2 class="section-title text-center">Program dan Layanan Kami</h2>
-        <div class="layanan-flex">
-          <div class="layanan-card">
-            <div class="emoji">🎓</div>
-            <h3 class="layanan-title">AIF Beasiswa Finder</h3>
-            <p class="layanan-desc">Platform pencari beasiswa yang komprehensif dengan database lengkap beasiswa lokal dan internasional untuk mendukung perjalanan akademik alumni.</p>
-            <a href="https://aifscholarshipfinder.netlify.app/" class="btn-layanan">Cari Beasiswa</a>
-          </div>
-          
-          <div class="layanan-card">
-            <div class="emoji">👨‍🏫</div>
-            <h3 class="layanan-title">Konsultasi Karir</h3>
-            <p class="layanan-desc">Layanan bimbingan dan konseling karir dari para profesional berpengalaman untuk meningkatkan prospek kerja dan pengembangan karir.</p>
-            <a href="https://bit.ly/3EpteFf?r=lp&m=Mobt2wFDP4I" class="btn-layanan">Jadwal Konsultasi</a>
-          </div>
-          
-          <div class="layanan-card">
-            <div class="emoji">🤝</div>
-            <h3 class="layanan-title">Jaringan Alumni</h3>
-            <p class="layanan-desc">Platform untuk terhubung dengan sesama alumni Al-Iman Foundation guna menjalin kerjasama, berbagi pengalaman, dan memperluas networking.</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRwQIeep33Wjj6URKGfLysxu0vevpJODOaoAXWvak9GEzA8A/viewform" class="btn-layanan">Gabung Jaringan</a>
-          </div>
-          
-          <div class="layanan-card">
-            <div class="emoji">💝</div>
-            <h3 class="layanan-title">Program Donasi</h3>
-            <p class="layanan-desc">Program donasi dan wakaf untuk mendukung keberlanjutan layanan Al-Iman Foundation dalam membantu sesama alumni dan calon mahasiswa.</p>
-            <a href="donasi.html" class="btn-layanan">Donasi Sekarang</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Media Sosial Kami Section -->
-    <section class="section social-media-section" id="media-sosial">
-      <div class="container">
-        <h2 class="section-title text-center">Media Sosial Kami</h2>
-        <p class="section-desc text-center">Ikuti dan terhubung dengan kami melalui berbagai platform media sosial</p>
-        
-        <div class="social-media-grid">
-          <a href="https://www.instagram.com/aliman.foundation/" target="_blank" rel="noopener noreferrer" class="social-card instagram">
-            <div class="social-icon">
-              <i class="fab fa-instagram"></i>
-            </div>
-            <h3>Instagram</h3>
-            <p>@aliman.foundation</p>
-            <span class="follow-btn">Follow</span>
-          </a>
-          
-          <a href="https://www.facebook.com/aliman.foundation" target="_blank" rel="noopener noreferrer" class="social-card facebook">
-            <div class="social-icon">
-              <i class="fab fa-facebook-f"></i>
-            </div>
-            <h3>Facebook</h3>
-            <p>Al-Iman Foundation</p>
-            <span class="follow-btn">Follow</span>
-          </a>
-          
-          <a href="https://www.youtube.com/@aliman.foundation" target="_blank" rel="noopener noreferrer" class="social-card youtube">
-            <div class="social-icon">
-              <i class="fab fa-youtube"></i>
-            </div>
-            <h3>YouTube</h3>
-            <p>Al-Iman Foundation</p>
-            <span class="follow-btn">Subscribe</span>
-          </a>
-          
-          <a href="https://www.linkedin.com/company/aliman-foundation" target="_blank" rel="noopener noreferrer" class="social-card linkedin">
-            <div class="social-icon">
-              <i class="fab fa-linkedin-in"></i>
-            </div>
-            <h3>LinkedIn</h3>
-            <p>Al-Iman Foundation</p>
-            <span class="follow-btn">Connect</span>
-          </a>
-        </div>
-      </div>
-    </section>    <!-- Footer section akan langsung muncul setelah section Media Sosial -->
-
-    <!-- Footer -->
-    <footer class="footer-section">
-      <div class="footer-top">
+      <!-- Hero Section -->
+      <section class="section hero-section text-center">
         <div class="container">
-          <div class="footer-content">
-            <div class="footer-left">
-              <div class="footer-logo-group">
-                <img src="img/aiflogo.png" alt="Logo" class="footer-logo">
-                <div class="footer-brand">Al-Iman Foundation</div>
-                <div class="footer-motto">Enter to learn, leave to serve</div>
-              </div>
+          <div class="hero-logo-badge">
+            <img
+              src="img/aiflogo.png"
+              alt="Al-Iman Foundation Logo"
+              class="hero-logo"
+            />
+            <span class="hero-badge-text">Layanan Kami</span>
+          </div>
+          <div class="hero-title">Program dan Layanan Al-Iman Foundation</div>
+          <p class="hero-subtitle">
+            Berbagai program dan layanan untuk mendukung perkembangan karir dan
+            akademik alumni
+          </p>
+        </div>
+      </section>
+
+      <!-- Program dan Layanan Kami Section -->
+      <section class="section layanan-section" id="program-layanan">
+        <div class="container">
+          <h2 class="section-title text-center">Program dan Layanan Kami</h2>
+          <div class="layanan-flex">
+            <div class="layanan-card">
+              <div class="emoji">🎓</div>
+              <h3 class="layanan-title">Program Donasi AIF</h3>
+              <p class="layanan-desc">
+                Platform donasi kami membantu untuk mendukung pendidikan dan
+                kesejahteraan para alumni yang membutuhkan, dengan pengelolaan
+                dana yang transparan dan amanah.
+              </p>
+              <a
+                href="https://aifscholarshipfinder.netlify.app"
+                class="btn-layanan"
+                >Cari Beasiswa</a
+              >
             </div>
-            <div class="footer-right">
-              <div class="footer-info">
-                <h3>Kontak</h3>
-                <div class="footer-contact">
-                  <p>Jl. Lorem Ipsum</p>
-                  <p>Email: loremipsum@dolor.amet</p>
-                  <p>Telp: (021) 1234-5678</p>
+
+            <div class="layanan-card">
+              <div class="emoji">👨‍🏫</div>
+              <h3 class="layanan-title">Konsultasi Karir</h3>
+              <p class="layanan-desc">
+                Layanan bimbingan dan konseling karir dari para profesional
+                berpengalaman untuk meningkatkan prospek kerja dan pengembangan
+                karir.
+              </p>
+              <a
+                href="https://bit.ly/3EpteFf?r=lp&m=Mobt2wFDP4I"
+                class="btn-layanan"
+                >Jadwal Konsultasi</a
+              >
+            </div>
+
+            <div class="layanan-card">
+              <div class="emoji">🤝</div>
+              <h3 class="layanan-title">Jaringan Alumni</h3>
+              <p class="layanan-desc">
+                Platform untuk terhubung dengan sesama alumni Al-Iman Foundation
+                guna menjalin kerjasama, berbagi pengalaman, dan memperluas
+                networking.
+              </p>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdRwQIeep33Wjj6URKGfLysxu0vevpJODOaoAXWvak9GEzA8A/viewform"
+                class="btn-layanan"
+                >Gabung Jaringan</a
+              >
+            </div>
+
+            <div class="layanan-card">
+              <div class="emoji">💝</div>
+              <h3 class="layanan-title">Program Donasi</h3>
+              <p class="layanan-desc">
+                Program donasi dan wakaf untuk mendukung keberlanjutan layanan
+                Al-Iman Foundation dalam membantu sesama alumni dan calon
+                mahasiswa.
+              </p>
+              <a href="donasi.html" class="btn-layanan">Donasi Sekarang</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Media Sosial Kami Section -->
+      <section class="section social-media-section" id="media-sosial">
+        <div class="container">
+          <h2 class="section-title text-center">Media Sosial Kami</h2>
+          <p class="section-desc text-center">
+            Ikuti dan terhubung dengan kami melalui berbagai platform media
+            sosial
+          </p>
+
+          <div class="social-media-grid">
+            <a
+              href="https://www.instagram.com/aliman.foundation/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-card instagram"
+            >
+              <div class="social-icon">
+                <i class="fab fa-instagram"></i>
+              </div>
+              <h3>Instagram</h3>
+              <p>@aliman.foundation</p>
+              <span class="follow-btn">Follow</span>
+            </a>
+
+            <a
+              href="https://www.facebook.com/aliman.foundation"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-card facebook"
+            >
+              <div class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </div>
+              <h3>Facebook</h3>
+              <p>Al-Iman Foundation</p>
+              <span class="follow-btn">Follow</span>
+            </a>
+
+            <a
+              href="https://www.youtube.com/@aliman.foundation"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-card youtube"
+            >
+              <div class="social-icon">
+                <i class="fab fa-youtube"></i>
+              </div>
+              <h3>YouTube</h3>
+              <p>Al-Iman Foundation</p>
+              <span class="follow-btn">Subscribe</span>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/company/aliman-foundation"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-card linkedin"
+            >
+              <div class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+              <h3>LinkedIn</h3>
+              <p>Al-Iman Foundation</p>
+              <span class="follow-btn">Connect</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Footer section akan langsung muncul setelah section Media Sosial -->
+
+      <!-- Footer -->
+      <footer class="footer-section">
+        <div class="footer-top">
+          <div class="container">
+            <div class="footer-content">
+              <div class="footer-left">
+                <div class="footer-logo-group">
+                  <img src="img/aiflogo.png" alt="Logo" class="footer-logo" />
+                  <div class="footer-brand">Al-Iman Foundation</div>
+                  <div class="footer-motto">Enter to learn, leave to serve</div>
+                </div>
+              </div>
+              <div class="footer-right">
+                <div class="footer-info">
+                  <h3>Kontak</h3>
+                  <div class="footer-contact">
+                    <p>Jl. Lorem Ipsum</p>
+                    <p>Email: loremipsum@dolor.amet</p>
+                    <p>Telp: (021) 1234-5678</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <div class="footer-bottom-content">
-            <p>&copy; 2025 Al-Iman Foundation. All rights reserved.</p>
-            <div class="footer-social">
-              <a href="https://www.instagram.com/aliman.foundation/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-              <a href="https://www.facebook.com/aliman.foundation" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-              <a href="https://www.whatsapp.com/aliman.foundation" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="footer-bottom-content">
+              <p>&copy; 2025 Al-Iman Foundation. All rights reserved.</p>
+              <div class="footer-social">
+                <a
+                  href="https://www.instagram.com/aliman.foundation/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+                <a
+                  href="https://www.facebook.com/aliman.foundation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+                <a
+                  href="https://www.whatsapp.com/aliman.foundation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Whatsapp"
+                  ><i class="fa-brands fa-whatsapp"></i
+                ></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
-  </div>
+      </footer>
+    </div>
 
-  <script>
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const mobileNavMenu = document.querySelector('.mobile-nav-menu');
-    
-    mobileMenuBtn.addEventListener('click', function() {
-      mobileMenuBtn.classList.toggle('active');
-      mobileNavMenu.classList.toggle('active');
-    });
-    
-    // Close mobile menu when clicking on a link
-    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-    mobileNavLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        mobileMenuBtn.classList.remove('active');
-        mobileNavMenu.classList.remove('active');
+    <script>
+      // Mobile Menu Toggle
+      const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+      const mobileNavMenu = document.querySelector(".mobile-nav-menu");
+
+      mobileMenuBtn.addEventListener("click", function () {
+        mobileMenuBtn.classList.toggle("active");
+        mobileNavMenu.classList.toggle("active");
       });
-    });
-    
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-      const isClickInsideMenu = mobileNavMenu.contains(event.target);
-      const isClickOnButton = mobileMenuBtn.contains(event.target);
-      
-      if (!isClickInsideMenu && !isClickOnButton && mobileNavMenu.classList.contains('active')) {
-        mobileMenuBtn.classList.remove('active');
-        mobileNavMenu.classList.remove('active');
-      }
-    });
 
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
+      // Close mobile menu when clicking on a link
+      const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+      mobileNavLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          mobileMenuBtn.classList.remove("active");
+          mobileNavMenu.classList.remove("active");
+        });
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const isClickInsideMenu = mobileNavMenu.contains(event.target);
+        const isClickOnButton = mobileMenuBtn.contains(event.target);
+
+        if (
+          !isClickInsideMenu &&
+          !isClickOnButton &&
+          mobileNavMenu.classList.contains("active")
+        ) {
+          mobileMenuBtn.classList.remove("active");
+          mobileNavMenu.classList.remove("active");
         }
       });
-    });
-  </script>
 
-</body>
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
