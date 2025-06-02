@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Young+Serif:wght@400;600&family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/brands.min.css"
@@ -26,7 +26,6 @@
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/fixes.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -293,42 +292,6 @@
       </footer>
     </div>
 
-    <script>
-      // Mobile Menu Toggle
-      const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
-      const mobileNavMenu = document.querySelector(".mobile-nav-menu");
-
-      mobileMenuBtn.addEventListener("click", function () {
-        // Toggle active class on button for animation
-        mobileMenuBtn.classList.toggle("active");
-
-        // Toggle active class on menu to show/hide
-        mobileNavMenu.classList.toggle("active");
-      });
-
-      // Close mobile menu when clicking on a link
-      const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
-      mobileNavLinks.forEach((link) => {
-        link.addEventListener("click", function () {
-          mobileMenuBtn.classList.remove("active");
-          mobileNavMenu.classList.remove("active");
-        });
-      });
-
-      // Close mobile menu when clicking outside
-      document.addEventListener("click", function (event) {
-        const isClickInsideMenu = mobileNavMenu.contains(event.target);
-        const isClickOnButton = mobileMenuBtn.contains(event.target);
-
-        if (
-          !isClickInsideMenu &&
-          !isClickOnButton &&
-          mobileNavMenu.classList.contains("active")
-        ) {
-          mobileMenuBtn.classList.remove("active");
-          mobileNavMenu.classList.remove("active");
-        }
-      });
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
