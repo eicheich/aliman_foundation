@@ -311,6 +311,41 @@
         </div>
       </footer>
     </div>
+    <script>
+      // Mobile Menu Toggle
+      const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+      const mobileNavMenu = document.querySelector(".mobile-nav-menu");
+
+      mobileMenuBtn.addEventListener("click", function () {
+        mobileMenuBtn.classList.toggle("active");
+        mobileNavMenu.classList.toggle("active");
+      });
+
+      // Close mobile menu when clicking on a link
+      const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+
+      mobileNavLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          mobileMenuBtn.classList.remove("active");
+          mobileNavMenu.classList.remove("active");
+        });
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const isClickInsideMenu = mobileNavMenu.contains(event.target);
+        const isClickOnButton = mobileMenuBtn.contains(event.target);
+
+        if (
+          !isClickInsideMenu &&
+          !isClickOnButton &&
+          mobileNavMenu.classList.contains("active")
+        ) {
+          mobileMenuBtn.classList.remove("active");
+          mobileNavMenu.classList.remove("active");
+        }
+      });
+    </script>
 
     <script src="js/main.js"></script>
   </body>

@@ -6,6 +6,7 @@
     <title>Donasi - Al-Iman Foundation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Young+Serif:wght@400;600&family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -46,6 +47,7 @@
             <span class="hamburger-line"></span>
           </button>
         </div>
+        
         <!-- Mobile Navigation -->
         <nav class="mobile-nav-menu">
           <a href="index.html" class="mobile-nav-link">Beranda</a>
@@ -71,7 +73,6 @@
             Dukung misi Al-Iman Foundation dalam membantu pendidikan dan
             pengembangan karir alumni
           </p>
-        </div>
       </section>
 
       <!-- Donasi Section -->
@@ -150,23 +151,42 @@
                 <div class="payment-icon paypal-icon">
                   <i class="fab fa-paypal"></i>
                 </div>
-                <h3 class="payment-title">PayPal</h3>
+                <h3 class="payment-title">Pay</h3>
               </div>
-
-              <p style="color: #666; margin-bottom: 20px">
-                Untuk donasi internasional, Anda dapat menggunakan PayPal dengan
-                mudah dan aman.
-              </p>
-
-              <a
-                href="https://www.paypal.com/donate/?hosted_button_id=SAMPLE123"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="paypal-button"
-              >
-                <i class="fab fa-paypal"></i>
-                Donasi via PayPal
-              </a>
+              <div class="account-details">
+                <div class="account-row">
+                  <span class="account-label">Bank:</span>
+                  <span class="account-value"
+                    >Paypal</span
+                  >
+                  <button
+                    class="copy-btn"
+                    onclick="copyToClipboard('Paypal')"
+                  >
+                    Copy
+                  </button>
+                </div>
+                <div class="account-row">
+                  <span class="account-label">ID:</span>
+                  <span class="account-value">@rizkysyahrul</span>
+                  <button
+                    class="copy-btn"
+                    onclick="copyToClipboard('@rizkysyahrul')"
+                  >
+                    Copy
+                  </button>
+                </div>
+                <div class="account-row">
+                  <span class="account-label">Atas Nama:</span>
+                  <span class="account-value">M. Rizki Syahrul Mubarok</span>
+                  <button
+                    class="copy-btn"
+                    onclick="copyToClipboard('M. Rizki Syahrul Mubarok')"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
 
               <p
                 style="
@@ -176,8 +196,8 @@
                   font-style: italic;
                 "
               >
-                <i class="fas fa-shield-alt"></i> Transaksi aman dan terlindungi
-                oleh PayPal.
+                <i class="fas fa-info-circle"></i> Setelah transfer, mohon
+                konfirmasi donasi Anda melalui WhatsApp atau email kami.
               </p>
             </div>
           </div>
@@ -187,7 +207,7 @@
             <h3>
               <i class="fas fa-heart"></i> Terima Kasih Atas Kebaikan Anda
             </h3>
-            <p>
+            <p >
               Setiap rupiah yang Anda donasikan akan digunakan secara transparan
               untuk mendukung program beasiswa, konsultasi karir, dan
               pengembangan platform yang membantu para alumni. Bersama-sama kita
@@ -214,9 +234,9 @@
                 <div class="footer-info">
                   <h3>Kontak</h3>
                   <div class="footer-contact">
-                    <p>Jl. Lorem Ipsum</p>
-                    <p>Email: loremipsum@dolor.amet</p>
-                    <p>Telp: (021) 1234-5678</p>
+                    <p>Dwi Warga Tunggal Jaya, Lampung</p>
+                    <p>Email: career@alimanfoundation.org</p>
+                    <p>Telp: +62 858-3870-2874</p>
                   </div>
                 </div>
               </div>
@@ -255,12 +275,41 @@
         </div>
       </footer>
     </div>
+    <script>
+      // Mobile Menu Toggle
+      const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+      const mobileNavMenu = document.querySelector(".mobile-nav-menu");
 
-    <!-- Toast Notification -->
-    <div id="toast" class="toast">
-      <i class="fas fa-check-circle"></i> Berhasil disalin ke clipboard!
-    </div>
+      mobileMenuBtn.addEventListener("click", function () {
+        mobileMenuBtn.classList.toggle("active");
+        mobileNavMenu.classList.toggle("active");
+      });
 
+      // Close mobile menu when clicking on a link
+      const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+
+      mobileNavLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          mobileMenuBtn.classList.remove("active");
+          mobileNavMenu.classList.remove("active");
+        });
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const isClickInsideMenu = mobileNavMenu.contains(event.target);
+        const isClickOnButton = mobileMenuBtn.contains(event.target);
+
+        if (
+          !isClickInsideMenu &&
+          !isClickOnButton &&
+          mobileNavMenu.classList.contains("active")
+        ) {
+          mobileMenuBtn.classList.remove("active");
+          mobileNavMenu.classList.remove("active");
+        }
+      });
+    </script>
     <script src="js/main.js"></script>
   </body>
 </html>
