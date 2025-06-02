@@ -19,12 +19,11 @@
       "label": "Peserta Konsultasi"
     }
   ],
-  "testimonials": [
-    {
+  "testimonials": [    {
       "id": 1,
       "name": "Ibnu Shina",
       "position": "Hinode TC",
-      "photo": "img/testimonials/alumni1.jpg",
+      "photo": "img/testimonials/ibnushina.jpg",
       "quote": "Berkat program konsultasi karir dari Al-Iman Foundation, saya berhasil mendapatkan pekerjaan impian di Silicon Valley. Workshop persiapan wawancara dan pengembangan CV yang saya ikuti sangat membantu.",
       "year": "2024",
       "degree": "Computer Science"
@@ -33,19 +32,17 @@
       "id": 2,
       "name": "Siti Nurhaliza",
       "position": "Financial Analyst di HSBC, London",
-      "photo": "img/testimonials/alumni2.jpg",
+      "photo": "img/testimonials/rifqi.jpg",
       "quote": "Informasi beasiswa yang diberikan Al-Iman Foundation sangat berharga dan membuka pintu karir internasional bagi saya. Tanpa dukungan mereka, saya tidak mungkin dapat melanjutkan studi S2 di London.",
-      "year": "2023",
-      "degree": "Finance"
+      "year": "2023"
     },
     {
       "id": 3,
       "name": "Muhammad Faisal",
       "position": "Medical Researcher di Tokyo University",
-      "photo": "img/testimonials/alumni3.jpg",
+      "photo": "img/testimonials/dadang.jpg",
       "quote": "Program jaringan alumni mempertemukan saya dengan mentor yang membimbing karir saya hingga ke Jepang. Koneksi yang dibina oleh Al-Iman Foundation sangat membantu perjalanan karir saya di bidang riset medis.",
-      "year": "2022",
-      "degree": "Medicine"
+      "year": "2022"
     },
     {
       "id": 4,
@@ -53,8 +50,7 @@
       "position": "Senior Engineer di PETRONAS, Malaysia",
       "photo": "img/testimonials/alumni4.jpg",
       "quote": "Al-Iman Foundation membantu saya mempersiapkan dokumen aplikasi pekerjaan dan memberikan tips berharga menghadapi assessment center. Beberapa bulan kemudian, saya diterima bekerja di Malaysia dengan gaji kompetitif.",
-      "year": "2023",
-      "degree": "Engineering"
+      "year": "2023"
     }
   ]
 }
