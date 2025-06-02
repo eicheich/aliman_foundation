@@ -194,5 +194,96 @@ document.addEventListener('DOMContentLoaded', function () {
     // Add floating animation to feature icons
     document.querySelectorAll('.feature-icon, .service-icon').forEach(icon => {
         icon.classList.add('animate-float');
-    });
+    }); // Load testimonials from JSON data
+    async function loadTestimonials() {
+        try {
+            const response = await fetch('data/testimonials.json');
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            const data = await response.json();
+            let testimonials = data.testimonials;
+            const testimonialsContainer = document.getElementById('testimonials-container');
+            if (!testimonialsContainer) return;
+            // Only use testimonials with photo that exists in the folder, or fallback to logo
+            testimonials = testimonials.map(t => {
+                // Only allow jpgs that exist, or fallback
+                let allowed = ['ibnushina.jpg', 'rifqi.jpg', 'dadang.jpg'];
+                let photoFile = t.photo ? t.photo.split('/').pop() : '';
+                if (!allowed.includes(photoFile)) {
+                    t.photo = 'img/aiflogo.png';
+                }
+                return t;
+            });
+            // Define color schemes for quote icons
+            const quoteColors = ['#10b093', '#f5a61c', '#4285f4', '#e74c3c', '#9b59b6'];
+            testimonialsContainer.innerHTML = '';
+            testimonials.forEach((testimonial, index) => {
+                const colorIndex = index % quoteColors.length;
+                const revealClass = index % 2 === 0 ? 'reveal-left' : 'reveal-right';
+                const testimonialCard = document.createElement('div');
+                testimonialCard.className = `alumni-testimonial-card ${revealClass}`;
+                testimonialCard.innerHTML = `
+                    <div class="testimonial-header">
+                        <div class="alumni-photo">
+                            <img src="${testimonial.photo}" alt="${testimonial.name}" onerror="this.src='img/aiflogo.png'" />
+                        </div>
+                        <div class="alumni-info">
+                            <h3 class="alumni-name">${testimonial.name}</h3>
+                            <p class="alumni-position">${testimonial.position}</p>
+                            <p class="alumni-degree">${testimonial.degree ? testimonial.degree + ', ' : ''}${testimonial.year}</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-quote">
+                        <i class="fa-solid fa-quote-left quote-icon" style="color: ${quoteColors[colorIndex]}"></i>
+                        <p>${testimonial.quote}</p>
+                    </div>
+                `;
+                testimonialsContainer.appendChild(testimonialCard);
+            });
+            // Re-observe the new testimonial cards for animations
+            document.querySelectorAll('.alumni-testimonial-card').forEach(card => {
+                if (typeof observer !== 'undefined') observer.observe(card);
+            });
+        } catch (error) {
+            const testimonialsContainer = document.getElementById('testimonials-container');
+            if (testimonialsContainer) {
+                testimonialsContainer.innerHTML = '<p style="text-align: center; color: #666;">Unable to load testimonials at the moment.</p>';
+            }
+        }
+    }
+    loadTestimonials();
+
+    // Testimonials horizontal scroll functionality
+    const scrollContainer = document.querySelector('.alumni-testimonials-container');
+    const scrollLeftBtn = document.querySelector('.scroll-left');
+    const scrollRightBtn = document.querySelector('.scroll-right');
+
+    if (scrollContainer && scrollLeftBtn && scrollRightBtn) {
+        const cardWidth = 380; // Approximate width of one card plus gap
+
+        scrollLeftBtn.addEventListener('click', () => {
+            scrollContainer.scrollBy({
+                left: -cardWidth,
+                behavior: 'smooth'
+            });
+        });
+
+        scrollRightBtn.addEventListener('click', () => {
+            scrollContainer.scrollBy({
+                left: cardWidth,
+                behavior: 'smooth'
+            });
+        });
+
+        // Update arrow visibility based on scroll position
+        function updateArrows() {
+            const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+            const currentScroll = scrollContainer.scrollLeft;
+
+            scrollLeftBtn.style.opacity = currentScroll > 0 ? '1' : '0.5';
+            scrollRightBtn.style.opacity = currentScroll < maxScroll ? '1' : '0.5';
+        }
+
+        scrollContainer.addEventListener('scroll', updateArrows);
+        updateArrows(); // Initial call
+    }
 });

@@ -1,5 +1,26 @@
 {
-  "testimonials": [    {
+  "stats": [
+    {
+      "id": 1,
+      "icon": "graduation-cap",
+      "stat": "500+",
+      "label": "Alumni Terbantu"
+    },
+    {
+      "id": 2,
+      "icon": "money-bill",
+      "stat": "2.5M+",
+      "label": "Total Beasiswa Dibagikan"
+    },
+    {
+      "id": 3,
+      "icon": "users",
+      "stat": "300+",
+      "label": "Peserta Konsultasi"
+    }
+  ],
+  "testimonials": [
+    {
       "id": 1,
       "name": "Ibnu Shina",
       "position": "Hinode TC",
@@ -10,19 +31,29 @@
     },
     {
       "id": 2,
-      "name": "Dadang Kurniawan",
-      "position": "Hinode TC",
-      "photo": "img/testimonials/dadang.jpg",
+      "name": "Siti Nurhaliza",
+      "position": "Financial Analyst di HSBC, London",
+      "photo": "img/testimonials/alumni2.jpg",
       "quote": "Informasi beasiswa yang diberikan Al-Iman Foundation sangat berharga dan membuka pintu karir internasional bagi saya. Tanpa dukungan mereka, saya tidak mungkin dapat melanjutkan studi S2 di London.",
       "year": "2023"
     },
     {
       "id": 3,
-      "name": "Rifqy Alrian",
-      "position": "Hinode TC",
-      "photo": "img/testimonials/rifqi.jpg",
+      "name": "Muhammad Faisal",
+      "position": "Medical Researcher di Tokyo University",
+      "photo": "img/testimonials/alumni3.jpg",
       "quote": "Program jaringan alumni mempertemukan saya dengan mentor yang membimbing karir saya hingga ke Jepang. Koneksi yang dibina oleh Al-Iman Foundation sangat membantu perjalanan karir saya di bidang riset medis.",
-      "year": "2022"
+      "year": "2022",
+      "degree": "Medicine"
+    },
+    {
+      "id": 4,
+      "name": "Nurul Hidayah",
+      "position": "Senior Engineer di PETRONAS, Malaysia",
+      "photo": "img/testimonials/alumni4.jpg",
+      "quote": "Al-Iman Foundation membantu saya mempersiapkan dokumen aplikasi pekerjaan dan memberikan tips berharga menghadapi assessment center. Beberapa bulan kemudian, saya diterima bekerja di Malaysia dengan gaji kompetitif.",
+      "year": "2023",
+      "degree": "Engineering"
     }
   ]
 }
