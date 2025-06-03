@@ -4649,18 +4649,14 @@ img {
 }
 
 .alumni-testimonials-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 30px;
     position: relative;
     z-index: 1;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
     padding: 20px 0;
-    scrollbar-width: none;
-    /* Firefox */
-    -ms-overflow-style: none;
-    /* Internet Explorer 10+ */
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .alumni-testimonials-container::-webkit-scrollbar {
