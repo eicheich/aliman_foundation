@@ -30,32 +30,42 @@
   <body>
     <div class="wrapper">
       <!-- Navbar/Header -->
-    <header class="section" id="header">
-      <div class="container header-flex">
-        <a href="index.html" class="header-logo-group" style="text-decoration: none; color: inherit;">
-          <img src="img/aiflogo.png" alt="Logo AIF" class="logo rounded-circle">
-          <div class="brand-title">
-            <span>Al-Iman<br>Foundation</span>
-          </div>
-        </a>          <!-- Desktop Navigation -->
-        <nav class="nav-menu desktop-nav">
-          <a href="index.html" class="nav-link active">Beranda</a>
-          <a href="layanan.html" class="nav-link">Layanan</a>
-          <a href="donasi.html" class="nav-link">Donasi</a>
-          <a href="kontak.html" class="nav-link">Kontak</a>
-        </nav>
+      <header class="section" id="header">
+        <div class="container header-flex">
+          <a
+            href="index.html"
+            class="header-logo-group"
+            style="text-decoration: none; color: inherit"
+          >
+            <img
+              src="img/aiflogo.png"
+              alt="Logo AIF"
+              class="logo rounded-circle"
+            />
+            <div class="brand-title">
+              <span>Al-Iman<br />Foundation</span>
+            </div>
+          </a>
+          <!-- Desktop Navigation -->
+          <nav class="nav-menu desktop-nav">
+            <a href="index.html" class="nav-link active">Beranda</a>
+            <a href="layanan.html" class="nav-link">Layanan</a>
+            <a href="donasi.html" class="nav-link">Donasi</a>
+            <a href="kontak.html" class="nav-link">Kontak</a>
+          </nav>
           <!-- Mobile Menu Button - positioned on the right -->
-        <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
-          <span class="hamburger"></span>
-        </button>
-      </div>        <!-- Mobile Navigation -->
-      <nav class="mobile-nav-menu">
-        <a href="index.html" class="mobile-nav-link active">Beranda</a>
-        <a href="layanan.html" class="mobile-nav-link">Layanan</a>
-        <a href="donasi.html" class="mobile-nav-link">Donasi</a>
-        <a href="kontak.html" class="mobile-nav-link">Kontak</a>
-      </nav>
-    </header>
+          <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+            <span class="hamburger"></span>
+          </button>
+        </div>
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav-menu">
+          <a href="index.html" class="mobile-nav-link active">Beranda</a>
+          <a href="layanan.html" class="mobile-nav-link">Layanan</a>
+          <a href="donasi.html" class="mobile-nav-link">Donasi</a>
+          <a href="kontak.html" class="mobile-nav-link">Kontak</a>
+        </nav>
+      </header>
 
       <!-- Hero Section -->
       <section class="section hero-section text-center">
@@ -242,10 +252,8 @@
       <section class="section alumni-testimonials-section reveal">
         <div class="container">
           <h2 class="section-title text-center reveal-special">
-            Apa Kata Mereka
-            <span class="section-title-highlight" style="color: #10b093"
-              >Yang Terdampak</span
-            >
+            Cerita Alumni: Inspirasi & Dampak Bersama Al-Iman Foundation
+
           </h2>
           <p class="section-description text-center reveal-special">
             Dengarkan langsung pengalaman para alumni yang telah merasakan
@@ -270,49 +278,55 @@
       <script>
         // Fetch testimonials from data/testimonials.json and render them
         fetch("data/testimonials.json")
-          .then((response) => response.json())
+          .then((response) => {
+            if (!response.ok) throw new Error("HTTP error " + response.status);
+            return response.json();
+          })
           .then((data) => {
             const testimonials = data.testimonials || [];
             const container = document.getElementById("testimonials-container");
+
             if (testimonials.length === 0) {
               container.innerHTML = "<p>Tidak ada testimoni tersedia.</p>";
               return;
             }
+
             container.innerHTML = testimonials
               .map(
                 (item) => `
           <div class="testimonial-card">
-        <div class="testimonial-content">
-          <p class="testimonial-text">"${item.quote || item.text}"</p>
-        </div>
-        <div class="testimonial-footer">
-          <div class="testimonial-photo">
-            <img src="${item.photo || "img/default-avatar.png"}" alt="${
+            <div class="testimonial-content">
+              <p class="testimonial-text">"${item.quote || item.text}"</p>
+            </div>
+            <div class="testimonial-footer">
+              <div class="testimonial-photo">
+                <img src="${item.photo || "img/default-avatar.png"}" alt="${
                   item.name
                 }">
-          </div>
-          <div class="testimonial-info">
-            <div class="testimonial-name">${item.name}</div>
-            <div class="testimonial-role">${
-              item.position || item.role || ""
-            }</div>
-            <div class="testimonial-year">${
-              item.year ? "Angkatan " + item.year : ""
-            }</div>
-          </div>
-        </div>
+              </div>
+              <div class="testimonial-info">
+                <div class="testimonial-name">${item.name}</div>
+                <div class="testimonial-role">${
+                  item.position || item.role || ""
+                }</div>
+                <div class="testimonial-year">${
+                  item.year ? "Angkatan " + item.year : ""
+                }</div>
+              </div>
+            </div>
           </div>
         `
               )
               .join("");
           })
-          .catch(() => {
+          .catch((err) => {
             document.getElementById("testimonials-container").innerHTML =
-              "<p>Gagal memuat testimoni.</p>";
+              "<p>Gagal memuat testimoni.<br><span style='color:red;font-size:0.9em'>" +
+              err +
+              "</span></p>";
           });
       </script>
-      
-      <!-- Footer -->
+      < !-- Footer -->
       <footer class="footer-section">
         <div class="footer-top">
           <div class="container">
@@ -330,7 +344,7 @@
                   <div class="footer-contact">
                     <p>Dwi Warga Tunggal Jaya, Lampung</p>
                     <p>Email: career@alimanfoundation.org</p>
-                    <p>Telp: +62 858-3870-2874</p>
+                    <p>Telp:+62 858-3870-2874</p>
                   </div>
                 </div>
               </div>
@@ -347,16 +361,14 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  ><i class="fa-brands fa-instagram"></i
-                ></a>
-                <a
+                  ><i class="fa-brands fa-instagram"></i></a
+                ><a
                   href="https://www.facebook.com/aliman.foundation"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
-                  ><i class="fa-brands fa-facebook"></i
-                ></a>
-                <a
+                  ><i class="fa-brands fa-facebook"></i></a
+                ><a
                   href="https://www.whatsapp.com/aliman.foundation"
                   target="_blank"
                   rel="noopener noreferrer"
