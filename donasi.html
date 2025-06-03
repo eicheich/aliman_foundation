@@ -1,257 +1,315 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Donasi - Al-Iman Foundation</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Young+Serif:wght@400;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/brands.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/solid.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" crossorigin="anonymous">
-</head>
-<body>
-  <div class="wrapper">
-    <!-- Navbar/Header -->
-    <header class="section" id="header">
-      <div class="container header-flex">
-        <a href="index.html" class="header-logo-group" style="text-decoration: none; color: inherit;">
-          <img src="img/aiflogo.png" alt="Logo AIF" class="logo rounded-circle">
-          <div class="brand-title">
-            <span>Al-Iman<br>Foundation</span>
-          </div>
-        </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donasi - Al-Iman Foundation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Young+Serif:wght@400;600&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Navbar/Header -->
+      <header class="section" id="header">
+        <div class="container header-flex">
+          <a
+            href="index.html"
+            class="header-logo-group"
+            style="text-decoration: none; color: inherit"
+          >
+            <img
+              src="img/aiflogo.png"
+              alt="Logo AIF"
+              class="logo rounded-circle"
+            />
+            <div class="brand-title">
+              <span>Al-Iman<br />Foundation</span>
+            </div>
+          </a>
+          <!-- Desktop Navigation -->
+          <nav class="nav-menu desktop-nav">
+            <a href="index.html" class="nav-link">Beranda</a>
+            <a href="layanan.html" class="nav-link">Layanan</a>
+            <a href="donasi.html" class="nav-link active">Donasi</a>
+            <a href="kontak.html" class="nav-link">Kontak</a>
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
         
-        <!-- Desktop Navigation -->
-        <nav class="nav-menu desktop-nav">
-          <a href="index.html" class="nav-link">Beranda</a>
-          <a href="layanan.html" class="nav-link active">Layanan</a>
-          <a href="https://aifscholarshipfinder.netlify.app/" class="nav-link">Beasiswa Finder</a>
-          <a href="kontak.html" class="nav-link">Kontak</a>
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav-menu">
+          <a href="index.html" class="mobile-nav-link">Beranda</a>
+          <a href="layanan.html" class="mobile-nav-link">Layanan</a>
+          <a href="donasi.html" class="mobile-nav-link active">Donasi</a>
+          <a href="kontak.html" class="mobile-nav-link">Kontak</a>
         </nav>
-        
-        <!-- Mobile Menu Button -->
-        <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
-      </div>
-      
-      <!-- Mobile Navigation -->
-      <nav class="mobile-nav-menu">
-        <a href="index.html" class="mobile-nav-link">Beranda</a>
-        <a href="layanan.html" class="mobile-nav-link active">Layanan</a>
-        <a href="beasiswa.html" class="mobile-nav-link">Beasiswa Finder</a>
-        <a href="kontak.html" class="mobile-nav-link">Kontak</a>
-      </nav>
-    </header>
+      </header>
 
-    <!-- Hero Section -->
-    <section class="section hero-section text-center">
-      <div class="container">
-        <div class="hero-logo-badge">
-          <img src="img/aiflogo.png" alt="Al-Iman Foundation Logo" class="hero-logo">
-          <span class="hero-badge-text">Donasi</span>
-        </div>
-        <div class="hero-title">Berbagi Untuk Sesama</div>
-        <p class="hero-subtitle">Dukung misi Al-Iman Foundation dalam membantu pendidikan dan pengembangan karir alumni</p>
-      </div>
-    </section>
-
-    <!-- Donasi Section -->
-    <section class="donasi-section">
-      <div class="donasi-container">
-        <div class="donasi-intro">
-          <h2>Mari Berdonasi</h2>
-          <p>Setiap donasi Anda sangat berarti untuk keberlanjutan program-program Al-Iman Foundation. Bersama-sama kita dapat membantu lebih banyak alumni dalam mengembangkan karir dan meraih cita-cita mereka.</p>
-        </div>
-
-        <div class="payment-methods">
-          <!-- Bank Transfer -->
-          <div class="payment-card">
-            <div class="payment-header">
-              <div class="payment-icon bank-icon">
-                <i class="fas fa-university"></i>
-              </div>
-              <h3 class="payment-title">Transfer Bank</h3>
-            </div>
-            
-            <div class="account-details">
-              <div class="account-row">
-                <span class="account-label">Bank:</span>
-                <span class="account-value">Bank Mandiri</span>
-                <button class="copy-btn" onclick="copyToClipboard('Bank Mandiri')">Copy</button>
-              </div>
-              <div class="account-row">
-                <span class="account-label">No. Rekening:</span>
-                <span class="account-value">1234567890123456</span>
-                <button class="copy-btn" onclick="copyToClipboard('1234567890123456')">Copy</button>
-              </div>
-              <div class="account-row">
-                <span class="account-label">Atas Nama:</span>
-                <span class="account-value">Al-Iman Foundation</span>
-                <button class="copy-btn" onclick="copyToClipboard('Al-Iman Foundation')">Copy</button>
-              </div>
-            </div>
-            
-            <p style="color: #666; font-size: 0.9rem; margin-top: 15px; font-style: italic;">
-              <i class="fas fa-info-circle"></i> Setelah transfer, mohon konfirmasi donasi Anda melalui WhatsApp atau email kami.
-            </p>
-          </div>
-
-          <!-- PayPal -->
-          <div class="payment-card">
-            <div class="payment-header">
-              <div class="payment-icon paypal-icon">
-                <i class="fab fa-paypal"></i>
-              </div>
-              <h3 class="payment-title">PayPal</h3>
-            </div>
-            
-            <p style="color: #666; margin-bottom: 20px;">
-              Untuk donasi internasional, Anda dapat menggunakan PayPal dengan mudah dan aman.
-            </p>
-            
-            <a href="https://www.paypal.com/donate/?hosted_button_id=SAMPLE123" target="_blank" rel="noopener noreferrer" class="paypal-button">
-              <i class="fab fa-paypal"></i>
-              Donasi via PayPal
-            </a>
-            
-            <p style="color: #666; font-size: 0.9rem; margin-top: 15px; font-style: italic;">
-              <i class="fas fa-shield-alt"></i> Transaksi aman dan terlindungi oleh PayPal.
-            </p>
-          </div>
-        </div>
-
-        <!-- Donation Note -->
-        <div class="donation-note">
-          <h3><i class="fas fa-heart"></i> Terima Kasih Atas Kebaikan Anda</h3>
-          <p>
-            Setiap rupiah yang Anda donasikan akan digunakan secara transparan untuk mendukung program beasiswa, 
-            konsultasi karir, dan pengembangan platform yang membantu para alumni. Bersama-sama kita wujudkan 
-            visi "Enter to learn, leave to serve" dalam kehidupan nyata.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer-section">
-      <div class="footer-top">
+      <!-- Hero Section -->
+      <section class="section hero-section text-center">
         <div class="container">
-          <div class="footer-content">
-            <div class="footer-left">
-              <div class="footer-logo-group">
-                <img src="img/aiflogo.png" alt="Logo" class="footer-logo">
-                <div class="footer-brand">Al-Iman Foundation</div>
-                <div class="footer-motto">Enter to learn, leave to serve</div>
+          <div class="hero-logo-badge">
+            <img
+              src="img/aiflogo.png"
+              alt="Al-Iman Foundation Logo"
+              class="hero-logo"
+            />
+            <span class="hero-badge-text">Donasi</span>
+          </div>
+          <div class="hero-title">Berbagi Untuk Sesama</div>
+          <p class="hero-subtitle" style="color: #fff;">
+            Dukung misi Al-Iman Foundation dalam membantu pendidikan dan
+            pengembangan karir alumni
+          </p>
+      </section>
+
+      <!-- Donasi Section -->
+      <section class="donasi-section">
+        <div class="donasi-container">
+          <div class="donasi-intro">
+            <h2>Mari Berdonasi</h2>
+            <p>
+              Setiap donasi Anda sangat berarti untuk keberlanjutan
+              program-program Al-Iman Foundation. Bersama-sama kita dapat
+              membantu lebih banyak alumni dalam mengembangkan karir dan meraih
+              cita-cita mereka.
+            </p>
+          </div>
+
+          <div class="payment-methods">
+            <!-- Bank Transfer -->
+            <div class="payment-card">
+              <div class="payment-header">
+                <div class="payment-icon bank-icon">
+                  <i class="fas fa-university"></i>
+                </div>
+                <h3 class="payment-title">Transfer Bank</h3>
               </div>
+              <div class="account-details">
+                <div class="account-row">
+                  <span class="account-label">Bank:</span>
+                  <span class="account-value"
+                    >Bank BSI (Bank Syariah Indonesia)</span
+                  >
+                  <button
+                    class="copy-btn"
+                    onclick="copyToClipboard('Bank BSI (Bank Syariah Indonesia)')"
+                  >
+                    Copy
+                  </button>
+                </div>
+                <div class="account-row">
+                  <span class="account-label">No. Rekening:</span>
+                  <span class="account-value">1147498932</span>
+                  <button
+                    class="copy-btn"
+                    onclick="copyToClipboard('1147498932')"
+                  >
+                    Copy
+                  </button>
+                </div>
+                <div class="account-row">
+                  <span class="account-label">Atas Nama:</span>
+                  <span class="account-value">M. Rizki Syahrul Mubarok</span>
+                  <button
+                    class="copy-btn"
+                    onclick="copyToClipboard('M. Rizki Syahrul Mubarok')"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+
+              <p
+                style="
+                  color: #666;
+                  font-size: 0.9rem;
+                  margin-top: 15px;
+                  font-style: italic;
+                "
+              >
+                <i class="fas fa-info-circle"></i> Setelah transfer, mohon
+                konfirmasi donasi Anda melalui WhatsApp atau email kami.
+              </p>
             </div>
-            <div class="footer-right">
-              <div class="footer-info">
-                <h3>Kontak</h3>
-                <div class="footer-contact">
-                  <p>Jl. Lorem Ipsum</p>
-                  <p>Email: loremipsum@dolor.amet</p>
-                  <p>Telp: (021) 1234-5678</p>
+
+            <!-- PayPal -->
+            <div class="payment-card">
+              <div class="payment-header">
+                <div class="payment-icon paypal-icon">
+                  <i class="fab fa-paypal"></i>
+                </div>
+                <h3 class="payment-title">Pay</h3>
+              </div>
+              <div class="account-details">
+                <div class="account-row">
+                  <span class="account-label">Bank:</span>
+                  <span class="account-value"
+                    >Paypal</span
+                  >
+                  <button
+                    class="copy-btn"
+                    onclick="copyToClipboard('Paypal')"
+                  >
+                    Copy
+                  </button>
+                </div>
+                <div class="account-row">
+                  <span class="account-label">ID:</span>
+                  <span class="account-value">@rizkysyahrul</span>
+                  <button
+                    class="copy-btn"
+                    onclick="copyToClipboard('@rizkysyahrul')"
+                  >
+                    Copy
+                  </button>
+                </div>
+                <div class="account-row">
+                  <span class="account-label">Atas Nama:</span>
+                  <span class="account-value">M. Rizki Syahrul Mubarok</span>
+                  <button
+                    class="copy-btn"
+                    onclick="copyToClipboard('M. Rizki Syahrul Mubarok')"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+
+              <p
+                style="
+                  color: #666;
+                  font-size: 0.9rem;
+                  margin-top: 15px;
+                  font-style: italic;
+                "
+              >
+                <i class="fas fa-info-circle"></i> Setelah transfer, mohon
+                konfirmasi donasi Anda melalui WhatsApp atau email kami.
+              </p>
+            </div>
+          </div>
+
+          <!-- Donation Note -->
+          <div class="donation-note">
+            <h3>
+              <i class="fas fa-heart"></i> Terima Kasih Atas Kebaikan Anda
+            </h3>
+            <p >
+              Setiap rupiah yang Anda donasikan akan digunakan secara transparan
+              untuk mendukung program beasiswa, konsultasi karir, dan
+              pengembangan platform yang membantu para alumni. Bersama-sama kita
+              wujudkan visi "Enter to learn, leave to serve" dalam kehidupan
+              nyata.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer-section">
+        <div class="footer-top">
+          <div class="container">
+            <div class="footer-content">
+              <div class="footer-left">
+                <div class="footer-logo-group">
+                  <img src="img/aiflogo.png" alt="Logo" class="footer-logo" />
+                  <div class="footer-brand">Al-Iman Foundation</div>
+                  <div class="footer-motto">Enter to learn, leave to serve</div>
+                </div>
+              </div>
+              <div class="footer-right">
+                <div class="footer-info">
+                  <h3>Kontak</h3>
+                  <div class="footer-contact">
+                    <p>Dwi Warga Tunggal Jaya, Lampung</p>
+                    <p>Email: career@alimanfoundation.org</p>
+                    <p>Telp: +62 858-3870-2874</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <div class="footer-bottom-content">
-            <p>&copy; 2025 Al-Iman Foundation. All rights reserved.</p>
-            <div class="footer-social">
-              <a href="https://www.instagram.com/aliman.foundation/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-              <a href="https://www.facebook.com/aliman.foundation" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-              <a href="https://www.whatsapp.com/aliman.foundation" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="footer-bottom-content">
+              <p>&copy; 2025 Al-Iman Foundation. All rights reserved.</p>
+              <div class="footer-social">
+                <a
+                  href="https://www.instagram.com/aliman.foundation/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+                <a
+                  href="https://www.facebook.com/aliman.foundation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+                <a
+                  href="https://www.whatsapp.com/aliman.foundation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Whatsapp"
+                  ><i class="fa-brands fa-whatsapp"></i
+                ></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
-  </div>
+      </footer>
+    </div>
+    <script>
+      // Mobile Menu Toggle
+      const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+      const mobileNavMenu = document.querySelector(".mobile-nav-menu");
 
-  <!-- Toast Notification -->
-  <div id="toast" class="toast">
-    <i class="fas fa-check-circle"></i> Berhasil disalin ke clipboard!
-  </div>
-
-  <script>
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const mobileNavMenu = document.querySelector('.mobile-nav-menu');
-    
-    mobileMenuBtn.addEventListener('click', function() {
-      mobileMenuBtn.classList.toggle('active');
-      mobileNavMenu.classList.toggle('active');
-    });
-    
-    // Close mobile menu when clicking on a link
-    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-    mobileNavLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        mobileMenuBtn.classList.remove('active');
-        mobileNavMenu.classList.remove('active');
+      mobileMenuBtn.addEventListener("click", function () {
+        mobileMenuBtn.classList.toggle("active");
+        mobileNavMenu.classList.toggle("active");
       });
-    });
-    
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-      const isClickInsideMenu = mobileNavMenu.contains(event.target);
-      const isClickOnButton = mobileMenuBtn.contains(event.target);
-      
-      if (!isClickInsideMenu && !isClickOnButton && mobileNavMenu.classList.contains('active')) {
-        mobileMenuBtn.classList.remove('active');
-        mobileNavMenu.classList.remove('active');
-      }
-    });
 
-    // Copy to clipboard function
-    function copyToClipboard(text) {
-      navigator.clipboard.writeText(text).then(function() {
-        showToast();
-      }).catch(function(err) {
-        // Fallback for older browsers
-        const textArea = document.createElement('textarea');
-        textArea.value = text;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-        showToast();
+      // Close mobile menu when clicking on a link
+      const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+
+      mobileNavLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          mobileMenuBtn.classList.remove("active");
+          mobileNavMenu.classList.remove("active");
+        });
       });
-    }
 
-    // Show toast notification
-    function showToast() {
-      const toast = document.getElementById('toast');
-      toast.classList.add('show');
-      setTimeout(() => {
-        toast.classList.remove('show');
-      }, 3000);
-    }
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const isClickInsideMenu = mobileNavMenu.contains(event.target);
+        const isClickOnButton = mobileMenuBtn.contains(event.target);
 
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
+        if (
+          !isClickInsideMenu &&
+          !isClickOnButton &&
+          mobileNavMenu.classList.contains("active")
+        ) {
+          mobileMenuBtn.classList.remove("active");
+          mobileNavMenu.classList.remove("active");
         }
       });
-    });
-  </script>
-
-</body>
+    </script>
+    <script src="js/main.js"></script>
+  </body>
 </html>

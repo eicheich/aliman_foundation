@@ -1,0 +1,29 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Ibnu Shina",
+      "position": "Hinode TC",
+      "photo": "img/testimonials/ibnushina.jpg",
+      "quote": "Berkat program konsultasi karir dari Al-Iman Foundation, saya berhasil mendapatkan pekerjaan impian di Jepang. Workshop persiapan wawancara dan pengembangan CV yang saya ikuti sangat membantu saya untuk diterima bekerja di perusahaan Jepang.",
+      "year": "2024",
+      "degree": "Computer Science"
+    },
+    {
+      "id": 2,
+      "name": "Dadang Kurniawan",
+      "position": "Hinode TC",
+      "photo": "img/testimonials/dadang.jpg",
+      "quote": "Informasi beasiswa dan pelatihan kerja yang diberikan Al-Iman Foundation sangat membantu saya mendapatkan kesempatan bekerja di Jepang. Dukungan mereka sangat berarti dalam proses adaptasi dan pengembangan karir saya di luar negeri.",
+      "year": "2023"
+    },
+    {
+      "id": 3,
+      "name": "Rifqy Alrian",
+      "position": "Hinode TC",
+      "photo": "img/testimonials/rifqi.jpg",
+      "quote": "Program jaringan alumni mempertemukan saya dengan mentor yang membimbing karir saya hingga ke Jepang. Koneksi dan pengalaman yang saya dapatkan dari Al-Iman Foundation sangat membantu perjalanan karir saya di Jepang.",
+      "year": "2022"
+    }
+  ]
+}
